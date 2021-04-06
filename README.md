@@ -8,6 +8,8 @@ Developer Treasury: https://bscscan.com/address/0xBadf379be89b77D059aB02d871FC23
 
 Emissions Operator: https://bscscan.com/address/0x9F37068a58DE8a2adfaECA4Eb01794E23868365F
 
+Merkle Airdrop: https://bscscan.com/address/0xea751572184ca6244b6ECcC1830c1830A12dA6C6
+
 ### Strategy Contracts
 zsb-USD: https://bscscan.com/address/0x62b39BEB9e784e957CD112706919a9F6bACE0Cc5
 
