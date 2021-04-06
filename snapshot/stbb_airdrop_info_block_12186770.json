@@ -1,0 +1,3701 @@
+[
+	{
+		"user": "0xB20ffd606AF088D98169aa673b4a15E16BDA86CD",
+		"stbz_balance": "147632676219498774366",
+		"eligible_stbz_balance": "147632676219498774366",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "147632676219498774366"
+	},
+	{
+		"user": "0x7A13BFC2f21809A0eC1c8f787DFA5136579EB6D1",
+		"stbz_balance": "858897246378971109444",
+		"eligible_stbz_balance": "858897246378971109444",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "858897246378971109444"
+	},
+	{
+		"user": "0xC0f85116E291d9D2c24983C291f8cc10a234107e",
+		"stbz_balance": "194783534444893300125",
+		"eligible_stbz_balance": "194783534444893300125",
+		"stol_balance": "149411896281050700577",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "194783534444893300125"
+	},
+	{
+		"user": "0xF5E6830CC47C2525CED527335ecE99Fb5e2313Fe",
+		"stbz_balance": "314512065908701392203",
+		"eligible_stbz_balance": "314512065908701392203",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "314512065908701392203"
+	},
+	{
+		"user": "0x909Ae1fC12c1C64F7554dC27a1c7785EFaba79b7",
+		"stbz_balance": "515033111546794561212",
+		"eligible_stbz_balance": "515033111546794561212",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "515033111546794561212"
+	},
+	{
+		"user": "0x1e121993b4A8bC79D18A4C409dB84c100FFf25F5",
+		"stbz_balance": "131675347759908611016",
+		"eligible_stbz_balance": "131675347759908611016",
+		"stol_balance": "330049864556228288184",
+		"boosted": "true",
+		"bonus": "39502604327972583305",
+		"claimable_stbb": "171177952087881194321"
+	},
+	{
+		"user": "0x1D3643399e5534dd49f2B04F2f0615153bd209fd",
+		"stbz_balance": "489911853604995158158",
+		"eligible_stbz_balance": "489911853604995158158",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "489911853604995158158"
+	},
+	{
+		"user": "0xA55f40DDA037587403079694b2860563572fD148",
+		"stbz_balance": "221083431760090378892",
+		"eligible_stbz_balance": "221083431760090378892",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "221083431760090378892"
+	},
+	{
+		"user": "0xE3e202b2CAC2B3eC41219C69fE0D2352b19cef69",
+		"stbz_balance": "192035655705344626391",
+		"eligible_stbz_balance": "192035655705344626391",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "192035655705344626391"
+	},
+	{
+		"user": "0xDb2cdf80D5A145790e3e1A0A0534f6FBbF1f7572",
+		"stbz_balance": "2527690285752667441573",
+		"eligible_stbz_balance": "2527690285752667441573",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "2527690285752667441573"
+	},
+	{
+		"user": "0x7b4778d265F5280f600a2917C6Aaf59B44fb2429",
+		"stbz_balance": "202141909118828320387",
+		"eligible_stbz_balance": "202141909118828320387",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "202141909118828320387"
+	},
+	{
+		"user": "0xBF30608066F972e705B54Fe75411e54b34d671c3",
+		"stbz_balance": "250000000000000000000",
+		"eligible_stbz_balance": "250000000000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "250000000000000000000"
+	},
+	{
+		"user": "0xFc7b67f72803832D7deD7985FA94B01Febf87c46",
+		"stbz_balance": "541109849801547285206",
+		"eligible_stbz_balance": "541109849801547285206",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "541109849801547285206"
+	},
+	{
+		"user": "0x6458f999E595D3bDA5692db9df011CCD4ab13a96",
+		"stbz_balance": "712948783255542625986",
+		"eligible_stbz_balance": "712948783255542625986",
+		"stol_balance": "3861277258252316174373",
+		"boosted": "true",
+		"bonus": "213884634976662787796",
+		"claimable_stbb": "926833418232205413782"
+	},
+	{
+		"user": "0x1D9e324E5FCE00E6fa955E453e3d1Aa1F43f33E6",
+		"stbz_balance": "3998225459280239552899",
+		"eligible_stbz_balance": "3998225459280239552899",
+		"stol_balance": "2927387264535719296371",
+		"boosted": "true",
+		"bonus": "878216179360715788911",
+		"claimable_stbb": "4876441638640955341810"
+	},
+	{
+		"user": "0x2ed7aFA17473e17Ac59908F088b4371D28585476",
+		"stbz_balance": "907136949618472886500",
+		"eligible_stbz_balance": "907136949618472886500",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "907136949618472886500"
+	},
+	{
+		"user": "0x74bBe9E937914f5Baa89d1a128E22Ab86cB62467",
+		"stbz_balance": "111990645304067130729",
+		"eligible_stbz_balance": "111990645304067130729",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "111990645304067130729"
+	},
+	{
+		"user": "0x76f91DCf2aA8F542A5Baf8AC9B06B074d80D4015",
+		"stbz_balance": "1206404085347986257473",
+		"eligible_stbz_balance": "1206404085347986257473",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "1206404085347986257473"
+	},
+	{
+		"user": "0x63Dbf00C99EaD0635FF5aDf2fd2f1F7F2141fc7C",
+		"stbz_balance": "25140384688033525795641",
+		"eligible_stbz_balance": "25000000000000000000000",
+		"stol_balance": "26276117744420159961714",
+		"boosted": "true",
+		"bonus": "7500000000000000000000",
+		"claimable_stbb": "32500000000000000000000"
+	},
+	{
+		"user": "0x08d93188c4C439651993f0C6656ed1253238e451",
+		"stbz_balance": "413493728288959353562",
+		"eligible_stbz_balance": "413493728288959353562",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "413493728288959353562"
+	},
+	{
+		"user": "0xCba1A275e2D858EcffaF7a87F606f74B719a8A93",
+		"stbz_balance": "85039444823385298559898",
+		"eligible_stbz_balance": "25000000000000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "25000000000000000000000"
+	},
+	{
+		"user": "0x6e102D689303660FE8235888fC04a64Db243d9F1",
+		"stbz_balance": "738699181667487051810",
+		"eligible_stbz_balance": "738699181667487051810",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "738699181667487051810"
+	},
+	{
+		"user": "0x0810684B41975c15DE5E4174642c17b2f7603981",
+		"stbz_balance": "2154930476839348692865",
+		"eligible_stbz_balance": "2154930476839348692865",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "2154930476839348692865"
+	},
+	{
+		"user": "0xF9D8f84A49E764e0b7F0CDafCB808635CFcC00B9",
+		"stbz_balance": "105656166341956713943",
+		"eligible_stbz_balance": "105656166341956713943",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "105656166341956713943"
+	},
+	{
+		"user": "0x5D5Fa56eBE1f83AE3C602884dC996E2c622545F8",
+		"stbz_balance": "156862778885140209119",
+		"eligible_stbz_balance": "156862778885140209119",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "156862778885140209119"
+	},
+	{
+		"user": "0x544B199505266403Ee49830b876A6baf350b937b",
+		"stbz_balance": "7749589786806208625478",
+		"eligible_stbz_balance": "7749589786806208625478",
+		"stol_balance": "3447281910445668421661",
+		"boosted": "true",
+		"bonus": "1034184573133700526498",
+		"claimable_stbb": "8783774359939909151976"
+	},
+	{
+		"user": "0x9eD629Bc305c5731D43de27Cbbe8F77976893c2b",
+		"stbz_balance": "459233455895129573316",
+		"eligible_stbz_balance": "459233455895129573316",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "459233455895129573316"
+	},
+	{
+		"user": "0xe9a6365bdC8c93B12798e28D11C185d3780Af9Aa",
+		"stbz_balance": "177874448725681702184",
+		"eligible_stbz_balance": "177874448725681702184",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "177874448725681702184"
+	},
+	{
+		"user": "0x60F008F0759A71494D81cE0C8d715eCb995A822e",
+		"stbz_balance": "460369875443301461063",
+		"eligible_stbz_balance": "460369875443301461063",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "460369875443301461063"
+	},
+	{
+		"user": "0x0c6410396Eb84105Ad728b52244178BE34545fE2",
+		"stbz_balance": "185408007467221489195",
+		"eligible_stbz_balance": "185408007467221489195",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "185408007467221489195"
+	},
+	{
+		"user": "0x7CCB36fc647c190E0C3a9A27E5425c76c4Acc5D9",
+		"stbz_balance": "294760693761751488818",
+		"eligible_stbz_balance": "294760693761751488818",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "294760693761751488818"
+	},
+	{
+		"user": "0x977Ce470898DCb619b997DAAdfa8557Dfee59034",
+		"stbz_balance": "747881999608299362505",
+		"eligible_stbz_balance": "747881999608299362505",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "747881999608299362505"
+	},
+	{
+		"user": "0x986dd0602F91a0aa40069Eb9DD46d3c95cA2dd02",
+		"stbz_balance": "281728572893821853108",
+		"eligible_stbz_balance": "281728572893821853108",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "281728572893821853108"
+	},
+	{
+		"user": "0x834bc57eE60AbD149473D455991013C83889B049",
+		"stbz_balance": "322561712799969912777",
+		"eligible_stbz_balance": "322561712799969912777",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "322561712799969912777"
+	},
+	{
+		"user": "0x4318e6fd0B1929B9803Fa6F35fa3542Bef85C9c5",
+		"stbz_balance": "205789103800165466937",
+		"eligible_stbz_balance": "205789103800165466937",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "205789103800165466937"
+	},
+	{
+		"user": "0xA0aF727f05D17d6071Ad5341Fb8AFfecd4b3B80a",
+		"stbz_balance": "282796244003727463752",
+		"eligible_stbz_balance": "282796244003727463752",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "282796244003727463752"
+	},
+	{
+		"user": "0x43D49717C3CB3DdC85c51AeF06f3DeedBBE79054",
+		"stbz_balance": "423962613187290301520",
+		"eligible_stbz_balance": "423962613187290301520",
+		"stol_balance": "595468752422623562130",
+		"boosted": "true",
+		"bonus": "127188783956187090456",
+		"claimable_stbb": "551151397143477391976"
+	},
+	{
+		"user": "0x2B83aC024B0a4Ba3f93776Cacb61D98310614aFE",
+		"stbz_balance": "336486708923500737106",
+		"eligible_stbz_balance": "336486708923500737106",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "336486708923500737106"
+	},
+	{
+		"user": "0xeBeF5Ff475d55C38036b49DFc6E73ca2fF1025f1",
+		"stbz_balance": "107680184936383994683",
+		"eligible_stbz_balance": "107680184936383994683",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "107680184936383994683"
+	},
+	{
+		"user": "0x666D58423D8Cc66D2c8a6253d5C487985908E88f",
+		"stbz_balance": "1650059115300728277897",
+		"eligible_stbz_balance": "1650059115300728277897",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "1650059115300728277897"
+	},
+	{
+		"user": "0x70f1033420e6a50dCB9894Cb76afa5443d749d4C",
+		"stbz_balance": "540169545622420802676",
+		"eligible_stbz_balance": "540169545622420802676",
+		"stol_balance": "428900639846507243682",
+		"boosted": "true",
+		"bonus": "128670191953952173105",
+		"claimable_stbb": "668839737576372975781"
+	},
+	{
+		"user": "0xE7A6d81a4B543c1Bf2BD10CEB74A72689Dc2E4b1",
+		"stbz_balance": "14497955686770780318867",
+		"eligible_stbz_balance": "14497955686770780318867",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "14497955686770780318867"
+	},
+	{
+		"user": "0x0b13f13c0E99F24b96A835B787D1347B33d87776",
+		"stbz_balance": "5647546338910550493831",
+		"eligible_stbz_balance": "5647546338910550493831",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "5647546338910550493831"
+	},
+	{
+		"user": "0x4Ee5e0E66F1Bb573c82Bb48fda43A449390fFA73",
+		"stbz_balance": "112060342982020748185",
+		"eligible_stbz_balance": "112060342982020748185",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "112060342982020748185"
+	},
+	{
+		"user": "0xB6B29a97650091f6B500b38E7844991df3056459",
+		"stbz_balance": "198240361871765324615",
+		"eligible_stbz_balance": "198240361871765324615",
+		"stol_balance": "116580684935680453461",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "198240361871765324615"
+	},
+	{
+		"user": "0x35291D7Fdb8b3Da62B67d2F26458379217aFf512",
+		"stbz_balance": "135769030944748778324",
+		"eligible_stbz_balance": "135769030944748778324",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "135769030944748778324"
+	},
+	{
+		"user": "0xc843b210B7f1F8B52E9965528176f796E5d63B32",
+		"stbz_balance": "399609538877525533578",
+		"eligible_stbz_balance": "399609538877525533578",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "399609538877525533578"
+	},
+	{
+		"user": "0x53121a3Ac1dAc2dEd02DA537E9F1370a77961aB5",
+		"stbz_balance": "602562241844739807674",
+		"eligible_stbz_balance": "602562241844739807674",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "602562241844739807674"
+	},
+	{
+		"user": "0xf1c6faf83De831f57225Ce9f9499cCEdb5A2361D",
+		"stbz_balance": "391312168307042254604",
+		"eligible_stbz_balance": "391312168307042254604",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "391312168307042254604"
+	},
+	{
+		"user": "0x6167a457202C06fb07829b952E87642eC09EEfAE",
+		"stbz_balance": "177059012473890656910",
+		"eligible_stbz_balance": "177059012473890656910",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "177059012473890656910"
+	},
+	{
+		"user": "0x34E8dB41c4EC274429D01597Bc86AEed4d6e9B5e",
+		"stbz_balance": "232661903224734621693",
+		"eligible_stbz_balance": "232661903224734621693",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "232661903224734621693"
+	},
+	{
+		"user": "0xeA40cC95aB9DF24b54287CcEE5257077a66343cA",
+		"stbz_balance": "102990163650942800430",
+		"eligible_stbz_balance": "102990163650942800430",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "102990163650942800430"
+	},
+	{
+		"user": "0xa75eAC42334956b7b15B492f961E293A7CaB32A7",
+		"stbz_balance": "300616529475878671964",
+		"eligible_stbz_balance": "300616529475878671964",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "300616529475878671964"
+	},
+	{
+		"user": "0xF1901e6bdc9CE90fA71DfEd64356ad6d59263673",
+		"stbz_balance": "249086463236495184871",
+		"eligible_stbz_balance": "249086463236495184871",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "249086463236495184871"
+	},
+	{
+		"user": "0x90718353B5A0A4582D21F8A2321D9A2f0eaa3651",
+		"stbz_balance": "111828074772933106243",
+		"eligible_stbz_balance": "111828074772933106243",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "111828074772933106243"
+	},
+	{
+		"user": "0x97e931494A837Ecde1d2f152fCEf1C2F5E093356",
+		"stbz_balance": "2590617762186549578079",
+		"eligible_stbz_balance": "2590617762186549578079",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "2590617762186549578079"
+	},
+	{
+		"user": "0x6769e890A47D26262378301E869aFBD30b890F65",
+		"stbz_balance": "110759312618388679440",
+		"eligible_stbz_balance": "110759312618388679440",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "110759312618388679440"
+	},
+	{
+		"user": "0x41105D472D64F3D6d8C07a5A55B0e22705FA3792",
+		"stbz_balance": "106896626225938151433",
+		"eligible_stbz_balance": "106896626225938151433",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "106896626225938151433"
+	},
+	{
+		"user": "0x7420fA58bA44E1141d5E9ADB6903BE549f7cE0b5",
+		"stbz_balance": "6597054071527434994758",
+		"eligible_stbz_balance": "6597054071527434994758",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "6597054071527434994758"
+	},
+	{
+		"user": "0x55C44b2827D73BA7eDaFf4FE21f7E12F57e4115b",
+		"stbz_balance": "503775012795253498159",
+		"eligible_stbz_balance": "503775012795253498159",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "503775012795253498159"
+	},
+	{
+		"user": "0x808A023B72260170c95d831F589A1ae0DCa1e43E",
+		"stbz_balance": "500000000000000000000",
+		"eligible_stbz_balance": "500000000000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "500000000000000000000"
+	},
+	{
+		"user": "0x8f3EF79e60276a2Bc83d86c753d0261C9690a202",
+		"stbz_balance": "3536091666938285518414",
+		"eligible_stbz_balance": "3536091666938285518414",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "3536091666938285518414"
+	},
+	{
+		"user": "0x41E8Dcb15010145CA096EE192a792909C74E647c",
+		"stbz_balance": "164452960792497501994",
+		"eligible_stbz_balance": "164452960792497501994",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "164452960792497501994"
+	},
+	{
+		"user": "0xA215f9977c45b3f032D17f1dDf87665ce2632Ad1",
+		"stbz_balance": "3588446915311239396179",
+		"eligible_stbz_balance": "3588446915311239396179",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "3588446915311239396179"
+	},
+	{
+		"user": "0xc0c04327750c337E61Db16611F0AA857B659cbDd",
+		"stbz_balance": "102920709775344095878",
+		"eligible_stbz_balance": "102920709775344095878",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "102920709775344095878"
+	},
+	{
+		"user": "0x709e70b2e7d4Bf2a459F3AD961C6fada23b374a8",
+		"stbz_balance": "130592313748983583786",
+		"eligible_stbz_balance": "130592313748983583786",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "130592313748983583786"
+	},
+	{
+		"user": "0x2FE7d879e342FEe5f1d04BfEdAf35Bb9D4fA5b89",
+		"stbz_balance": "300923125846005413923",
+		"eligible_stbz_balance": "300923125846005413923",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "300923125846005413923"
+	},
+	{
+		"user": "0x51Ca31fc7eFB55db794378695eF3506AbA0883D2",
+		"stbz_balance": "27196046373457740905215",
+		"eligible_stbz_balance": "25000000000000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "25000000000000000000000"
+	},
+	{
+		"user": "0xda0972c8431d06625b924dCfaf19D77BAB19Ae1C",
+		"stbz_balance": "2009106131861488312412",
+		"eligible_stbz_balance": "2009106131861488312412",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "2009106131861488312412"
+	},
+	{
+		"user": "0x8000F432747ccDc71B9DF9F8eB96EFfeeac6218E",
+		"stbz_balance": "964203725546502029096",
+		"eligible_stbz_balance": "964203725546502029096",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "964203725546502029096"
+	},
+	{
+		"user": "0xbF7ABb7636AD59f47568cED4903169593dda6E09",
+		"stbz_balance": "1643867465936189198649",
+		"eligible_stbz_balance": "1643867465936189198649",
+		"stol_balance": "251277766488065990678",
+		"boosted": "true",
+		"bonus": "75383329946419797203",
+		"claimable_stbb": "1719250795882608995852"
+	},
+	{
+		"user": "0x815612815D7fB01B1E8a97fe4A0996e77245A3Aa",
+		"stbz_balance": "762817261699041528352",
+		"eligible_stbz_balance": "762817261699041528352",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "762817261699041528352"
+	},
+	{
+		"user": "0x19e5EFf2Baa1C14Ce4FbDa99A0e8D79c8c3C8fc5",
+		"stbz_balance": "653504779683916571553",
+		"eligible_stbz_balance": "653504779683916571553",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "653504779683916571553"
+	},
+	{
+		"user": "0xF8EF5541b23A77189924A626247D2485Cf07C66C",
+		"stbz_balance": "113302802538038994333",
+		"eligible_stbz_balance": "113302802538038994333",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "113302802538038994333"
+	},
+	{
+		"user": "0xdff4E854ad03f210Fef9CAC47D71606c0Fb20C96",
+		"stbz_balance": "130036608444592259258",
+		"eligible_stbz_balance": "130036608444592259258",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "130036608444592259258"
+	},
+	{
+		"user": "0xcC8855d0fe88E327bC8e39f11516802398a1a620",
+		"stbz_balance": "147555948144642628353",
+		"eligible_stbz_balance": "147555948144642628353",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "147555948144642628353"
+	},
+	{
+		"user": "0xB9D7efE79BB6383B6A071C5eBDFb124e28E25F51",
+		"stbz_balance": "329387705749109757557",
+		"eligible_stbz_balance": "329387705749109757557",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "329387705749109757557"
+	},
+	{
+		"user": "0xE3a05aAF264DC865e1DbAf61841e89348E8ceb96",
+		"stbz_balance": "114713424153737729779",
+		"eligible_stbz_balance": "114713424153737729779",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "114713424153737729779"
+	},
+	{
+		"user": "0x941c69fe42579665f18d9f0Ea44Ac53b0E872276",
+		"stbz_balance": "2655890107381726136758",
+		"eligible_stbz_balance": "2655890107381726136758",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "2655890107381726136758"
+	},
+	{
+		"user": "0x3CFD6f4665bc888AA321998B49B86614BB26CD97",
+		"stbz_balance": "564042635457982256926",
+		"eligible_stbz_balance": "564042635457982256926",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "564042635457982256926"
+	},
+	{
+		"user": "0x6c949e5EA881BDe629D266717Fe1C429aF295E90",
+		"stbz_balance": "2673680756055628412850",
+		"eligible_stbz_balance": "2673680756055628412850",
+		"stol_balance": "2127180085020935504864",
+		"boosted": "true",
+		"bonus": "638154025506280651459",
+		"claimable_stbb": "3311834781561909064309"
+	},
+	{
+		"user": "0x356cD07b0b96860AC6C592de434772De9BD5b60f",
+		"stbz_balance": "629301147957517594451",
+		"eligible_stbz_balance": "629301147957517594451",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "629301147957517594451"
+	},
+	{
+		"user": "0x0De9bF9d88a84E72414af2417482d922a6484835",
+		"stbz_balance": "100121800634128539454",
+		"eligible_stbz_balance": "100121800634128539454",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "100121800634128539454"
+	},
+	{
+		"user": "0x8A538867235252bE6784BCf8d46050506Ff6071A",
+		"stbz_balance": "355266271058918376198",
+		"eligible_stbz_balance": "355266271058918376198",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "355266271058918376198"
+	},
+	{
+		"user": "0x94403A4D342c40860966C0344a88AC38B9dfC952",
+		"stbz_balance": "999999734887352066987",
+		"eligible_stbz_balance": "999999734887352066987",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "999999734887352066987"
+	},
+	{
+		"user": "0xfAa65D761876E51328A58a0F12f3Bb193d79b858",
+		"stbz_balance": "574935866580155714549",
+		"eligible_stbz_balance": "574935866580155714549",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "574935866580155714549"
+	},
+	{
+		"user": "0x05e0ef3feB4C88c9FCA77d0C6b353e2DD73251Fb",
+		"stbz_balance": "226590176269745835039",
+		"eligible_stbz_balance": "226590176269745835039",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "226590176269745835039"
+	},
+	{
+		"user": "0x0d18a2085992BE0BbcbE912d36d0125E4d1101Bd",
+		"stbz_balance": "113979790973861561196",
+		"eligible_stbz_balance": "113979790973861561196",
+		"stol_balance": "664954864248170975840",
+		"boosted": "true",
+		"bonus": "34193937292158468359",
+		"claimable_stbb": "148173728266020029555"
+	},
+	{
+		"user": "0x1F37AeddaEdCaA80CD3e663944FcFB39763744B3",
+		"stbz_balance": "518045173434769483485",
+		"eligible_stbz_balance": "518045173434769483485",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "518045173434769483485"
+	},
+	{
+		"user": "0xF24A0018befb3D7503b46c110f83D927d64E727d",
+		"stbz_balance": "275894897519982575982",
+		"eligible_stbz_balance": "275894897519982575982",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "275894897519982575982"
+	},
+	{
+		"user": "0x335c64adB6bb273282F07CE0259C440b8e2B0430",
+		"stbz_balance": "824412488211791445595",
+		"eligible_stbz_balance": "824412488211791445595",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "824412488211791445595"
+	},
+	{
+		"user": "0x7B8135DB002d27f745EF7f9f284fE9F641e6B217",
+		"stbz_balance": "2980734529150008639597",
+		"eligible_stbz_balance": "2980734529150008639597",
+		"stol_balance": "2172740995038652714132",
+		"boosted": "true",
+		"bonus": "651822298511595814240",
+		"claimable_stbb": "3632556827661604453837"
+	},
+	{
+		"user": "0x55aA656a58e9bEe60D1C79055273c417A25dFDbc",
+		"stbz_balance": "1701644128100055780406",
+		"eligible_stbz_balance": "1701644128100055780406",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "1701644128100055780406"
+	},
+	{
+		"user": "0x79c114d1B7dB470acB113fA073037263D2Ae4c28",
+		"stbz_balance": "100844350257419842356",
+		"eligible_stbz_balance": "100844350257419842356",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "100844350257419842356"
+	},
+	{
+		"user": "0xA53a042b38A65f196D6EF2d121305F5f902231Fd",
+		"stbz_balance": "186067806394967779296",
+		"eligible_stbz_balance": "186067806394967779296",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "186067806394967779296"
+	},
+	{
+		"user": "0x8c05DA2344828B19BB7CF933362e809270AA00f5",
+		"stbz_balance": "369432823959796975806",
+		"eligible_stbz_balance": "369432823959796975806",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "369432823959796975806"
+	},
+	{
+		"user": "0xd6Fd705EE0B31a9300D3E2154bccE777270CBb6f",
+		"stbz_balance": "1942026844379146694211",
+		"eligible_stbz_balance": "1942026844379146694211",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "1942026844379146694211"
+	},
+	{
+		"user": "0x320a74EC4f80c25D9EF25cA1549e47FbD8db3B9b",
+		"stbz_balance": "109599230134789386521",
+		"eligible_stbz_balance": "109599230134789386521",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "109599230134789386521"
+	},
+	{
+		"user": "0xbd8152Fc7F060c6555809F6EADA3ce64Cba4D723",
+		"stbz_balance": "278813842554418485352",
+		"eligible_stbz_balance": "278813842554418485352",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "278813842554418485352"
+	},
+	{
+		"user": "0xe777FC739bEbCBc7E26516Fdf6B67914336908ce",
+		"stbz_balance": "500262292447079821138",
+		"eligible_stbz_balance": "500262292447079821138",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "500262292447079821138"
+	},
+	{
+		"user": "0xC60D1429084887D705e30E6560632d013a47fe0f",
+		"stbz_balance": "240400000000000000000",
+		"eligible_stbz_balance": "240400000000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "240400000000000000000"
+	},
+	{
+		"user": "0xCa7DCCE3ddBE5e290df7200D2DF353C58E6C9fB2",
+		"stbz_balance": "27916492121418351862766",
+		"eligible_stbz_balance": "25000000000000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "25000000000000000000000"
+	},
+	{
+		"user": "0xC7aFf9590A13762F19a41D5a6A12012a0F776d04",
+		"stbz_balance": "100000000000000000000",
+		"eligible_stbz_balance": "100000000000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "100000000000000000000"
+	},
+	{
+		"user": "0x08072a5fBC90eed1Ca4FB863c1dF8aa1FeC61cFA",
+		"stbz_balance": "103783029832070712637",
+		"eligible_stbz_balance": "103783029832070712637",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "103783029832070712637"
+	},
+	{
+		"user": "0xB66190F67ed8f0ca790DdFE541ee1Bd0dA53fe70",
+		"stbz_balance": "535438712992566745262",
+		"eligible_stbz_balance": "535438712992566745262",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "535438712992566745262"
+	},
+	{
+		"user": "0x27b65f269E3EEe4c066242b767b3479bEDe5b3C2",
+		"stbz_balance": "179177669740279580139",
+		"eligible_stbz_balance": "179177669740279580139",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "179177669740279580139"
+	},
+	{
+		"user": "0xB954aC0599d131357e98dEE01Bf8F74a28F6B0c0",
+		"stbz_balance": "200904068045977157884",
+		"eligible_stbz_balance": "200904068045977157884",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "200904068045977157884"
+	},
+	{
+		"user": "0x7b505D4ac6ab4CdF3FF86C48ebf4b3645377817f",
+		"stbz_balance": "6826347641164147012815",
+		"eligible_stbz_balance": "6826347641164147012815",
+		"stol_balance": "5667644875495866264697",
+		"boosted": "true",
+		"bonus": "1700293462648759879409",
+		"claimable_stbb": "8526641103812906892224"
+	},
+	{
+		"user": "0xCfaba3994C45aa03e479000300801AE35B39c388",
+		"stbz_balance": "104014017636869760315",
+		"eligible_stbz_balance": "104014017636869760315",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "104014017636869760315"
+	},
+	{
+		"user": "0x46094d8B4b4b4EC0a5eb27Ac1Fe8D1E55B9dC646",
+		"stbz_balance": "159473100985217442359",
+		"eligible_stbz_balance": "159473100985217442359",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "159473100985217442359"
+	},
+	{
+		"user": "0x408329a24C6A3AE7DbAB6E12237E921b1cB9450f",
+		"stbz_balance": "824349473746215393777",
+		"eligible_stbz_balance": "824349473746215393777",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "824349473746215393777"
+	},
+	{
+		"user": "0xEC4A6f59960Fb55A7Fa49262e2628687b322cf62",
+		"stbz_balance": "469785194968903785292",
+		"eligible_stbz_balance": "469785194968903785292",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "469785194968903785292"
+	},
+	{
+		"user": "0xf072bBF692c9BCe64745D8c282d6B107054dA3Ba",
+		"stbz_balance": "158280016356345871608",
+		"eligible_stbz_balance": "158280016356345871608",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "158280016356345871608"
+	},
+	{
+		"user": "0x0be722795469468e04ce572eB77EB5882c94d6f5",
+		"stbz_balance": "210302318455005145073",
+		"eligible_stbz_balance": "210302318455005145073",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "210302318455005145073"
+	},
+	{
+		"user": "0xc51E4f7AdA44ca984cBBbAF035b8c2f4672B751D",
+		"stbz_balance": "226918432224198512910",
+		"eligible_stbz_balance": "226918432224198512910",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "226918432224198512910"
+	},
+	{
+		"user": "0xFB5eCE8fC9Ef35Cc4BE26d4625aB09f169905045",
+		"stbz_balance": "396404411752774248345",
+		"eligible_stbz_balance": "396404411752774248345",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "396404411752774248345"
+	},
+	{
+		"user": "0x89aa76Ce163998c28A793cEf101240721F3ee68c",
+		"stbz_balance": "158885035752118610853",
+		"eligible_stbz_balance": "158885035752118610853",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "158885035752118610853"
+	},
+	{
+		"user": "0x3F9C0BbF3Ffa9e52Ab5f28A46384a21a3A732F25",
+		"stbz_balance": "650928257332281876230",
+		"eligible_stbz_balance": "650928257332281876230",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "650928257332281876230"
+	},
+	{
+		"user": "0x57Cb41Bc08EF7A520A468fdF5BCC63B86B77ed28",
+		"stbz_balance": "331754241852080381232",
+		"eligible_stbz_balance": "331754241852080381232",
+		"stol_balance": "756292821061427481890",
+		"boosted": "true",
+		"bonus": "99526272555624114370",
+		"claimable_stbb": "431280514407704495602"
+	},
+	{
+		"user": "0xdbd2626E35Cc159204749c35f0B1Ea9742399345",
+		"stbz_balance": "124133024586215547134",
+		"eligible_stbz_balance": "124133024586215547134",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "124133024586215547134"
+	},
+	{
+		"user": "0xB2812370f17465AE096Ced55679428786734a678",
+		"stbz_balance": "368094117085090273205",
+		"eligible_stbz_balance": "368094117085090273205",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "368094117085090273205"
+	},
+	{
+		"user": "0x4F5c500029E772efEB07E2041F1369d8e9600820",
+		"stbz_balance": "1147842601279868828705",
+		"eligible_stbz_balance": "1147842601279868828705",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "1147842601279868828705"
+	},
+	{
+		"user": "0x6f500bB95Ee1cf1a92e45f7697fabb2D477087aF",
+		"stbz_balance": "2509380434069972645062",
+		"eligible_stbz_balance": "2509380434069972645062",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "2509380434069972645062"
+	},
+	{
+		"user": "0xDa7FC7825Eba671c937D4Ec6517f66248caa8Ef2",
+		"stbz_balance": "600241195751923194237",
+		"eligible_stbz_balance": "600241195751923194237",
+		"stol_balance": "430439901554139909046",
+		"boosted": "true",
+		"bonus": "129131970466241972714",
+		"claimable_stbb": "729373166218165166951"
+	},
+	{
+		"user": "0x34046531bE692817F0853ad4cCc78F3B1B5e1A7C",
+		"stbz_balance": "1267842775696405791913",
+		"eligible_stbz_balance": "1267842775696405791913",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "1267842775696405791913"
+	},
+	{
+		"user": "0xd68D5fE00DA4F8c1ad2f030ccEF74fDBEaD8fde5",
+		"stbz_balance": "6677380827476397343366",
+		"eligible_stbz_balance": "6677380827476397343366",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "6677380827476397343366"
+	},
+	{
+		"user": "0x5F00aC3a87C1581Ce315CaDF2a905e5b5cC306F0",
+		"stbz_balance": "578724541210953325819",
+		"eligible_stbz_balance": "578724541210953325819",
+		"stol_balance": "14336343608438764436893",
+		"boosted": "true",
+		"bonus": "173617362363285997746",
+		"claimable_stbb": "752341903574239323565"
+	},
+	{
+		"user": "0xD638dC334f3A9b6692F7Aa71a32949F7da12F9D4",
+		"stbz_balance": "300000000000000000000",
+		"eligible_stbz_balance": "300000000000000000000",
+		"stol_balance": "318541458700753625833",
+		"boosted": "true",
+		"bonus": "90000000000000000000",
+		"claimable_stbb": "390000000000000000000"
+	},
+	{
+		"user": "0xD7d790e15Ab37CEb124de88A207e826f5346C16A",
+		"stbz_balance": "143393617617191083364",
+		"eligible_stbz_balance": "143393617617191083364",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "143393617617191083364"
+	},
+	{
+		"user": "0x5a76C4D6Cb69B61E746BE1F980151bbBb90C26fB",
+		"stbz_balance": "200513829568798520904",
+		"eligible_stbz_balance": "200513829568798520904",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "200513829568798520904"
+	},
+	{
+		"user": "0xea1feB9A9a006a7fC253C6cA87349Be0da072F25",
+		"stbz_balance": "105940846393176734939",
+		"eligible_stbz_balance": "105940846393176734939",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "105940846393176734939"
+	},
+	{
+		"user": "0xe9920C2bDD13dFEaD70e4b4721D34f710cbB8cdB",
+		"stbz_balance": "468659412514692715804",
+		"eligible_stbz_balance": "468659412514692715804",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "468659412514692715804"
+	},
+	{
+		"user": "0xEB3FcFbb17B56566Bf3232cDf3A1EFde0af1BF1A",
+		"stbz_balance": "127489043533370934698",
+		"eligible_stbz_balance": "127489043533370934698",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "127489043533370934698"
+	},
+	{
+		"user": "0x40430074c133e1cF40c6eE4d14c97cB55Fd3c0a5",
+		"stbz_balance": "3347206271396200448975",
+		"eligible_stbz_balance": "3347206271396200448975",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "3347206271396200448975"
+	},
+	{
+		"user": "0x74c52e38fB622329f596e573a4878Bf616EAb280",
+		"stbz_balance": "100209481195521762901",
+		"eligible_stbz_balance": "100209481195521762901",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "100209481195521762901"
+	},
+	{
+		"user": "0x1269b659aBc50b75a9B77338aC0fAED0B416eE44",
+		"stbz_balance": "383402064796071859409",
+		"eligible_stbz_balance": "383402064796071859409",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "383402064796071859409"
+	},
+	{
+		"user": "0x69D2BC658490c7DdDa797D398e862ED4EEd2EB80",
+		"stbz_balance": "371839827016625378213",
+		"eligible_stbz_balance": "371839827016625378213",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "371839827016625378213"
+	},
+	{
+		"user": "0x00290ffc9e9D19bdA7b25c6e44d8ADF55DFBf2dD",
+		"stbz_balance": "17902902614939688903789",
+		"eligible_stbz_balance": "17902902614939688903789",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "17902902614939688903789"
+	},
+	{
+		"user": "0xd2860356e7c28D8fE65361679Ba79fc6719bdB9d",
+		"stbz_balance": "154167376684576563597",
+		"eligible_stbz_balance": "154167376684576563597",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "154167376684576563597"
+	},
+	{
+		"user": "0x4096859eF63422F1d9010dF09a586525EDEA2AF1",
+		"stbz_balance": "100581148789063839614",
+		"eligible_stbz_balance": "100581148789063839614",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "100581148789063839614"
+	},
+	{
+		"user": "0x3d8dC70AD1840f215D408f413683b3815dA694B1",
+		"stbz_balance": "146587695293091589061",
+		"eligible_stbz_balance": "146587695293091589061",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "146587695293091589061"
+	},
+	{
+		"user": "0xaAf3FF9D6fA6C67F1e1A574a6c505468740aDc25",
+		"stbz_balance": "1000079439168679415260",
+		"eligible_stbz_balance": "1000079439168679415260",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "1000079439168679415260"
+	},
+	{
+		"user": "0x89039E9fE8905Ff0A0E83cD36A21f49a6FEabfdd",
+		"stbz_balance": "106531872632559382790",
+		"eligible_stbz_balance": "106531872632559382790",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "106531872632559382790"
+	},
+	{
+		"user": "0x53169Fe9DD7338aEbE407d4fA0c8004b23B1cAAb",
+		"stbz_balance": "316528838905968253396",
+		"eligible_stbz_balance": "316528838905968253396",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "316528838905968253396"
+	},
+	{
+		"user": "0x0b869f689f1e80Cd630b0135B576C3eA1E8bC78c",
+		"stbz_balance": "428121909935910625935",
+		"eligible_stbz_balance": "428121909935910625935",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "428121909935910625935"
+	},
+	{
+		"user": "0x4dEE607a632C67dc6Cc8c1917a6A304928C7cAEB",
+		"stbz_balance": "375587951404691905455",
+		"eligible_stbz_balance": "375587951404691905455",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "375587951404691905455"
+	},
+	{
+		"user": "0x530D8De01f485769bcd1D21ba13dfbe3074f593C",
+		"stbz_balance": "247398334120485965896",
+		"eligible_stbz_balance": "247398334120485965896",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "247398334120485965896"
+	},
+	{
+		"user": "0x6576C40FB9173A508A4B446A7895d7344Ca40247",
+		"stbz_balance": "176741571916461575933",
+		"eligible_stbz_balance": "176741571916461575933",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "176741571916461575933"
+	},
+	{
+		"user": "0xe4F28b2D2e4D380C09FEf46d9FEFE5834bF49271",
+		"stbz_balance": "534143638154060230727",
+		"eligible_stbz_balance": "534143638154060230727",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "534143638154060230727"
+	},
+	{
+		"user": "0x285fed35cBEA271A711681e84fFd83c68a596A75",
+		"stbz_balance": "12092311336365900318813",
+		"eligible_stbz_balance": "12092311336365900318813",
+		"stol_balance": "13118244900207194094649",
+		"boosted": "true",
+		"bonus": "3627693400909770095644",
+		"claimable_stbb": "15720004737275670414457"
+	},
+	{
+		"user": "0xA48F81E900EB91008d1199a0b5a21342f2EF5b3e",
+		"stbz_balance": "3444924307561735146738",
+		"eligible_stbz_balance": "3444924307561735146738",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "3444924307561735146738"
+	},
+	{
+		"user": "0x28695f13e22FDae4D0Dea59052164937D948a3Bf",
+		"stbz_balance": "603202050849233294685",
+		"eligible_stbz_balance": "603202050849233294685",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "603202050849233294685"
+	},
+	{
+		"user": "0x641aC61bbe3946C98AE87FadcAcf4d73C9D91fB7",
+		"stbz_balance": "101000000000000000000",
+		"eligible_stbz_balance": "101000000000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "101000000000000000000"
+	},
+	{
+		"user": "0xE843339dB8648D3b282f09dfF666871802C6D05E",
+		"stbz_balance": "162530068140247130273",
+		"eligible_stbz_balance": "162530068140247130273",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "162530068140247130273"
+	},
+	{
+		"user": "0x30623d819Ab6A1420e3ea6980A277C0ba2d93603",
+		"stbz_balance": "335000000000000000000",
+		"eligible_stbz_balance": "335000000000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "335000000000000000000"
+	},
+	{
+		"user": "0x0dA4e20627636C0F4C3850fB3B5F36FEdbE07ce4",
+		"stbz_balance": "162036596387458064928",
+		"eligible_stbz_balance": "162036596387458064928",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "162036596387458064928"
+	},
+	{
+		"user": "0xC1821e3Cc4862005b9E397388d0A971b9FFE1735",
+		"stbz_balance": "101652689652213190767",
+		"eligible_stbz_balance": "101652689652213190767",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "101652689652213190767"
+	},
+	{
+		"user": "0x8ceDaD234493770678B087e97cf320C870267a7D",
+		"stbz_balance": "108405616088945845546",
+		"eligible_stbz_balance": "108405616088945845546",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "108405616088945845546"
+	},
+	{
+		"user": "0xDe6CF14D37F4fB06d67A1dc75cEa779b68D42094",
+		"stbz_balance": "544353809982459999990",
+		"eligible_stbz_balance": "544353809982459999990",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "544353809982459999990"
+	},
+	{
+		"user": "0x406cBFC2d391bEd42078138165465128b4E0CB06",
+		"stbz_balance": "100999999999977791222",
+		"eligible_stbz_balance": "100999999999977791222",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "100999999999977791222"
+	},
+	{
+		"user": "0xDa93f8E08C439d7FfE77e0bCE1cA6A8aB153d35b",
+		"stbz_balance": "374254350637931549695",
+		"eligible_stbz_balance": "374254350637931549695",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "374254350637931549695"
+	},
+	{
+		"user": "0x2b106Ebfa96d1bc9E29150C5a4DB2848c7B80F63",
+		"stbz_balance": "113265391119772806316",
+		"eligible_stbz_balance": "113265391119772806316",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "113265391119772806316"
+	},
+	{
+		"user": "0xd93DBa9758C6210dbCf494be84A136FC0561F9f9",
+		"stbz_balance": "277788431393542462671",
+		"eligible_stbz_balance": "277788431393542462671",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "277788431393542462671"
+	},
+	{
+		"user": "0xBf073d6c85f923384A3e62d728169F8B0B3049A9",
+		"stbz_balance": "152414462252320139681",
+		"eligible_stbz_balance": "152414462252320139681",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "152414462252320139681"
+	},
+	{
+		"user": "0xCCE8D59AFFdd93be338FC77FA0A298C2CB65Da59",
+		"stbz_balance": "794101012384667401235",
+		"eligible_stbz_balance": "794101012384667401235",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "794101012384667401235"
+	},
+	{
+		"user": "0xdF038885B13579FB8A1531178E63DE93cd49C62f",
+		"stbz_balance": "223449280869026747800",
+		"eligible_stbz_balance": "223449280869026747800",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "223449280869026747800"
+	},
+	{
+		"user": "0xc63C8459Fea26c0bc116DA495452C3484cd4b9Be",
+		"stbz_balance": "112580578939399980263",
+		"eligible_stbz_balance": "112580578939399980263",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "112580578939399980263"
+	},
+	{
+		"user": "0x5E8e952802c9b963143b001353D33cE7F71dCA09",
+		"stbz_balance": "178441181583537963775",
+		"eligible_stbz_balance": "178441181583537963775",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "178441181583537963775"
+	},
+	{
+		"user": "0xA12B26E34177623BDeE2c2c610AD0EA567636459",
+		"stbz_balance": "123375361072612730049",
+		"eligible_stbz_balance": "123375361072612730049",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "123375361072612730049"
+	},
+	{
+		"user": "0xccFeee24dDb48ef826Bbe63674AE13925D22AEca",
+		"stbz_balance": "2246129534556516949923",
+		"eligible_stbz_balance": "2246129534556516949923",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "2246129534556516949923"
+	},
+	{
+		"user": "0x27214fcaf6cd9Ac9858040dA59f84BCCa1935cF7",
+		"stbz_balance": "101500000000000000000",
+		"eligible_stbz_balance": "101500000000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "101500000000000000000"
+	},
+	{
+		"user": "0xFC93C3010eA5668C1b6900A9FE87168b63DeC145",
+		"stbz_balance": "1984317050345773160547",
+		"eligible_stbz_balance": "1984317050345773160547",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "1984317050345773160547"
+	},
+	{
+		"user": "0x1E9b3A260d8e032EaE24473f56f83e2641873f05",
+		"stbz_balance": "135000000000000000000",
+		"eligible_stbz_balance": "135000000000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "135000000000000000000"
+	},
+	{
+		"user": "0x126815fb37c62F4827c09E4c454FB74922c361c3",
+		"stbz_balance": "380425944408486947524",
+		"eligible_stbz_balance": "380425944408486947524",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "380425944408486947524"
+	},
+	{
+		"user": "0x6887dA62Cc4FE0B9dEa43cAAAac616a224BCB072",
+		"stbz_balance": "168938472346440946346",
+		"eligible_stbz_balance": "168938472346440946346",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "168938472346440946346"
+	},
+	{
+		"user": "0xe4989e7B39a21089B128908E1603fdC9939DBB78",
+		"stbz_balance": "205415775442967070147",
+		"eligible_stbz_balance": "205415775442967070147",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "205415775442967070147"
+	},
+	{
+		"user": "0x0ce0Fd1082Af6157Caa9429eD60D01b26ec6Ee54",
+		"stbz_balance": "261434677214576330508",
+		"eligible_stbz_balance": "261434677214576330508",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "261434677214576330508"
+	},
+	{
+		"user": "0x14df5677aa90eC0D64c631621DaD80b44f9DeAFF",
+		"stbz_balance": "107164400617629851259",
+		"eligible_stbz_balance": "107164400617629851259",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "107164400617629851259"
+	},
+	{
+		"user": "0x1F70AB7A96554F0cc1F6a4c57f2b244E8cBA2f92",
+		"stbz_balance": "924006823276947320573",
+		"eligible_stbz_balance": "924006823276947320573",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "924006823276947320573"
+	},
+	{
+		"user": "0x99BD6e18D02e24853F07AD5C573C1D6cECf34B8b",
+		"stbz_balance": "124445290713779336047",
+		"eligible_stbz_balance": "124445290713779336047",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "124445290713779336047"
+	},
+	{
+		"user": "0xF175e1Bc1d730FF0d3678EeF56c064b0064eAA56",
+		"stbz_balance": "265276233049720270164",
+		"eligible_stbz_balance": "265276233049720270164",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "265276233049720270164"
+	},
+	{
+		"user": "0x9D41ecceDD6911C60c523D528a326f0DC2b59F4e",
+		"stbz_balance": "3168278960197485917612",
+		"eligible_stbz_balance": "3168278960197485917612",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "3168278960197485917612"
+	},
+	{
+		"user": "0x9A924707Ae24d2e25a39E54d92917f1B7Ff8c2Ca",
+		"stbz_balance": "898786614632078961631",
+		"eligible_stbz_balance": "898786614632078961631",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "898786614632078961631"
+	},
+	{
+		"user": "0xD94Ea61f089E6EC2c97C16c33f6F262552B1C270",
+		"stbz_balance": "1593962765013776964259",
+		"eligible_stbz_balance": "1593962765013776964259",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "1593962765013776964259"
+	},
+	{
+		"user": "0x3A3CA14407448d5858D928546cA21e475F46F0C0",
+		"stbz_balance": "4097036175626087043379",
+		"eligible_stbz_balance": "4097036175626087043379",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "4097036175626087043379"
+	},
+	{
+		"user": "0x9758CAe2a81Ae1cF09AbA6192cB35B86934fD5dD",
+		"stbz_balance": "2665184955899902906680",
+		"eligible_stbz_balance": "2665184955899902906680",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "2665184955899902906680"
+	},
+	{
+		"user": "0x96693e6B3025E09915135814d6694365A2741Bb6",
+		"stbz_balance": "498646696389846649414",
+		"eligible_stbz_balance": "498646696389846649414",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "498646696389846649414"
+	},
+	{
+		"user": "0x93FF5e754c3d981de28a5b76764dc9f87C8bB647",
+		"stbz_balance": "934828205046443310476",
+		"eligible_stbz_balance": "934828205046443310476",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "934828205046443310476"
+	},
+	{
+		"user": "0xAf49E18a780EC926f75571153f6CDfC3f98a88e9",
+		"stbz_balance": "100100000000000000000",
+		"eligible_stbz_balance": "100100000000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "100100000000000000000"
+	},
+	{
+		"user": "0x820911F14Bb9594808B3AD2ea84cE90c88461077",
+		"stbz_balance": "723422095112272928160",
+		"eligible_stbz_balance": "723422095112272928160",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "723422095112272928160"
+	},
+	{
+		"user": "0x027193354D9aC0Fda7B14B89100657B4B46D7096",
+		"stbz_balance": "739806463109578018534",
+		"eligible_stbz_balance": "739806463109578018534",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "739806463109578018534"
+	},
+	{
+		"user": "0xA58a950Cc6083863D8179171D8A18a3537F46c5c",
+		"stbz_balance": "1374132389342113102865",
+		"eligible_stbz_balance": "1374132389342113102865",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "1374132389342113102865"
+	},
+	{
+		"user": "0xBCD12C1Ce63C55ef51696Bd2ADf860fc71BF6573",
+		"stbz_balance": "1292995813495701484477",
+		"eligible_stbz_balance": "1292995813495701484477",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "1292995813495701484477"
+	},
+	{
+		"user": "0x887AF394964Ef1D4088F8E8aC903b28946C84aE4",
+		"stbz_balance": "200000000000000000000",
+		"eligible_stbz_balance": "200000000000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "200000000000000000000"
+	},
+	{
+		"user": "0x4224cDf7Ef7C64FDC43112F8429aA1AD4b90b19B",
+		"stbz_balance": "132000121242688657302",
+		"eligible_stbz_balance": "132000121242688657302",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "132000121242688657302"
+	},
+	{
+		"user": "0x502d629728b9C461726BEEe240F89c5D82c5f1C5",
+		"stbz_balance": "798328140565404286125",
+		"eligible_stbz_balance": "798328140565404286125",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "798328140565404286125"
+	},
+	{
+		"user": "0x6C622Ee87c3CAddE20D757bAA83D4e9B5b76A0AA",
+		"stbz_balance": "101000000000000000000",
+		"eligible_stbz_balance": "101000000000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "101000000000000000000"
+	},
+	{
+		"user": "0x488E988fbD628223321B24890e60B22209c454ce",
+		"stbz_balance": "258415662179971348586",
+		"eligible_stbz_balance": "258415662179971348586",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "258415662179971348586"
+	},
+	{
+		"user": "0xDf64EFAe6E906EA7720eeC43D3A52B1eE777a7c7",
+		"stbz_balance": "593573529833312707087",
+		"eligible_stbz_balance": "593573529833312707087",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "593573529833312707087"
+	},
+	{
+		"user": "0xd4f27E66677ac0935fCb1b1E9e5334277d602ae1",
+		"stbz_balance": "102553003529886878172",
+		"eligible_stbz_balance": "102553003529886878172",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "102553003529886878172"
+	},
+	{
+		"user": "0x31af3D9F807B63556e70a6201beb362EEfd33C4f",
+		"stbz_balance": "2594415584940274364542",
+		"eligible_stbz_balance": "2594415584940274364542",
+		"stol_balance": "897815553382588227696",
+		"boosted": "true",
+		"bonus": "269344666014776468309",
+		"claimable_stbb": "2863760250955050832851"
+	},
+	{
+		"user": "0xf57D8056771d9156878bD4f10a49B6390C17F3Ac",
+		"stbz_balance": "422179917656934284382",
+		"eligible_stbz_balance": "422179917656934284382",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "422179917656934284382"
+	},
+	{
+		"user": "0xA1213cA9B378a7B73D92fCc2Fe1dB4228A6459A7",
+		"stbz_balance": "253839037554047442264",
+		"eligible_stbz_balance": "253839037554047442264",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "253839037554047442264"
+	},
+	{
+		"user": "0x97f2afa152f41F71f00EDa6087f6a2Cf26eB5981",
+		"stbz_balance": "1071695143591528240226",
+		"eligible_stbz_balance": "1071695143591528240226",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "1071695143591528240226"
+	},
+	{
+		"user": "0x9D690D3ccEBDA97a2D6c9FAEAA7224c17aD56332",
+		"stbz_balance": "270676058136584689136",
+		"eligible_stbz_balance": "270676058136584689136",
+		"stol_balance": "225844248784141763753",
+		"boosted": "true",
+		"bonus": "67753274635242529126",
+		"claimable_stbb": "338429332771827218262"
+	},
+	{
+		"user": "0x31A7437381355855FB9351cfE7865F859E81f387",
+		"stbz_balance": "131107996927079747216",
+		"eligible_stbz_balance": "131107996927079747216",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "131107996927079747216"
+	},
+	{
+		"user": "0x37487F72Eec0D6803Da2F21897415e91e0cC76f4",
+		"stbz_balance": "151759325521783986355",
+		"eligible_stbz_balance": "151759325521783986355",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "151759325521783986355"
+	},
+	{
+		"user": "0xF107A9b3A91d0Fe0e063e37e4dD3F6fd2dC3bdC6",
+		"stbz_balance": "200000000000000000000",
+		"eligible_stbz_balance": "200000000000000000000",
+		"stol_balance": "218319231751322333114",
+		"boosted": "true",
+		"bonus": "60000000000000000000",
+		"claimable_stbb": "260000000000000000000"
+	},
+	{
+		"user": "0x5bB6F3431585aBa50ca5cf670D2dfd68f8f932f3",
+		"stbz_balance": "587887423751864529559",
+		"eligible_stbz_balance": "587887423751864529559",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "587887423751864529559"
+	},
+	{
+		"user": "0x2AD6B3148A004a085326Ed388078f67AaA5d3F9a",
+		"stbz_balance": "1130414633694462479882",
+		"eligible_stbz_balance": "1130414633694462479882",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "1130414633694462479882"
+	},
+	{
+		"user": "0x63fC588966deacB2908b6A596a6386f3B1daD723",
+		"stbz_balance": "428303248201532574128",
+		"eligible_stbz_balance": "428303248201532574128",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "428303248201532574128"
+	},
+	{
+		"user": "0x4f607437E9252E5A092697eBfE7e1BaFC1511DD4",
+		"stbz_balance": "2885141228466238793106",
+		"eligible_stbz_balance": "2885141228466238793106",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "2885141228466238793106"
+	},
+	{
+		"user": "0xaDD6C7Db7c7033B904DD20C09430ab5558a92839",
+		"stbz_balance": "173454227606736137494",
+		"eligible_stbz_balance": "173454227606736137494",
+		"stol_balance": "357090185355360899278",
+		"boosted": "true",
+		"bonus": "52036268282020841248",
+		"claimable_stbb": "225490495888756978742"
+	},
+	{
+		"user": "0x6E4439C5ac99CD363E8744a4aE5cBC4De68E9098",
+		"stbz_balance": "16252905700406213992013",
+		"eligible_stbz_balance": "16252905700406213992013",
+		"stol_balance": "16583758424877046200321",
+		"boosted": "true",
+		"bonus": "4875871710121864197604",
+		"claimable_stbb": "21128777410528078189617"
+	},
+	{
+		"user": "0x58cE686427a9809Ec11F58209e6b33C0F3143Ee2",
+		"stbz_balance": "410867571383329337234",
+		"eligible_stbz_balance": "410867571383329337234",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "410867571383329337234"
+	},
+	{
+		"user": "0xF0BA3064503Fa4De506B98D891835De3022c1558",
+		"stbz_balance": "316192351735214626018",
+		"eligible_stbz_balance": "316192351735214626018",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "316192351735214626018"
+	},
+	{
+		"user": "0x38df5EaB959095F4589686f4D725c7d0a7ba8F75",
+		"stbz_balance": "146876348326199276047",
+		"eligible_stbz_balance": "146876348326199276047",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "146876348326199276047"
+	},
+	{
+		"user": "0xC47aE0799A2826b8aEd119097F6aDc7b2fA5388B",
+		"stbz_balance": "242547747078295593925",
+		"eligible_stbz_balance": "242547747078295593925",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "242547747078295593925"
+	},
+	{
+		"user": "0x60d979253c810f4A83023D5Df4dB3e91B785d735",
+		"stbz_balance": "552009577877818151746",
+		"eligible_stbz_balance": "552009577877818151746",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "552009577877818151746"
+	},
+	{
+		"user": "0xa25365fF844e1794e387b5397aa3bf6481a4396a",
+		"stbz_balance": "406415298267373004088",
+		"eligible_stbz_balance": "406415298267373004088",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "406415298267373004088"
+	},
+	{
+		"user": "0xE107374D4513f1C651a3c1359395d4989cE32e09",
+		"stbz_balance": "706465121035621954822",
+		"eligible_stbz_balance": "706465121035621954822",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "706465121035621954822"
+	},
+	{
+		"user": "0x5398C4eab22c131Ed3f5509BF04A077Ac0916DdA",
+		"stbz_balance": "598496244491591971768",
+		"eligible_stbz_balance": "598496244491591971768",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "598496244491591971768"
+	},
+	{
+		"user": "0xBA8e92E55dC5a2AcAf558e5A0743ffA45Cb11A54",
+		"stbz_balance": "622058083396565017177",
+		"eligible_stbz_balance": "622058083396565017177",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "622058083396565017177"
+	},
+	{
+		"user": "0xAb9Ff3b61c1fbC40D1ac6610b3b1093805165fb9",
+		"stbz_balance": "425855598484770483136",
+		"eligible_stbz_balance": "425855598484770483136",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "425855598484770483136"
+	},
+	{
+		"user": "0xd641372fB6bF050f717c3371bbbFDe11b3990374",
+		"stbz_balance": "302583052375597370700",
+		"eligible_stbz_balance": "302583052375597370700",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "302583052375597370700"
+	},
+	{
+		"user": "0x851A88571Af500482399CC2CC69d9edD48332638",
+		"stbz_balance": "298936284098051037712",
+		"eligible_stbz_balance": "298936284098051037712",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "298936284098051037712"
+	},
+	{
+		"user": "0x3Ae2D4F520CC844361327721035eFCfD3D70f400",
+		"stbz_balance": "119335079346885331475",
+		"eligible_stbz_balance": "119335079346885331475",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "119335079346885331475"
+	},
+	{
+		"user": "0x80F5C7B3B817c420E8225810baEE5712799dB706",
+		"stbz_balance": "252150487615819748234",
+		"eligible_stbz_balance": "252150487615819748234",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "252150487615819748234"
+	},
+	{
+		"user": "0xA3ECc80bE0EC72d46fC60539D23cF7C43Cb32Aa3",
+		"stbz_balance": "104150000000000000000",
+		"eligible_stbz_balance": "104150000000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "104150000000000000000"
+	},
+	{
+		"user": "0x895c83778Ee197bDeCb4cdF47168B4F72F2928F8",
+		"stbz_balance": "100355385358676684467",
+		"eligible_stbz_balance": "100355385358676684467",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "100355385358676684467"
+	},
+	{
+		"user": "0x372037bAc39f64250E4fF32e4532659199a39b16",
+		"stbz_balance": "100436176817503155349",
+		"eligible_stbz_balance": "100436176817503155349",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "100436176817503155349"
+	},
+	{
+		"user": "0x7450c327dcf8102C405a796DcB3643f4057C892F",
+		"stbz_balance": "1445001274724924938950",
+		"eligible_stbz_balance": "1445001274724924938950",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "1445001274724924938950"
+	},
+	{
+		"user": "0x6D7886C9f1b3f0Cb9fdDfB465476FE0Da1b9fe5B",
+		"stbz_balance": "362861392877184787046",
+		"eligible_stbz_balance": "362861392877184787046",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "362861392877184787046"
+	},
+	{
+		"user": "0x6bA3d9912D07d054a9185eEb5b121365b709F7e9",
+		"stbz_balance": "456465749532540059262",
+		"eligible_stbz_balance": "456465749532540059262",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "456465749532540059262"
+	},
+	{
+		"user": "0x579431C4ee8A94b1648814775BfE673DA5C10960",
+		"stbz_balance": "122344039736167543372",
+		"eligible_stbz_balance": "122344039736167543372",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "122344039736167543372"
+	},
+	{
+		"user": "0xe1A581b26652b79A06b0Db43086000332C547204",
+		"stbz_balance": "1413971785446045406927",
+		"eligible_stbz_balance": "1413971785446045406927",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "1413971785446045406927"
+	},
+	{
+		"user": "0xcD776a6074D7eb8dFEC327e1660f55990d7c5C97",
+		"stbz_balance": "737772727026039128930",
+		"eligible_stbz_balance": "737772727026039128930",
+		"stol_balance": "1023504941417726105953",
+		"boosted": "true",
+		"bonus": "221331818107811738679",
+		"claimable_stbb": "959104545133850867609"
+	},
+	{
+		"user": "0x3D685263E7592afF8DDc8f1567e0E1988889557D",
+		"stbz_balance": "683488380200234183059",
+		"eligible_stbz_balance": "683488380200234183059",
+		"stol_balance": "1023531329950096412480",
+		"boosted": "true",
+		"bonus": "205046514060070254918",
+		"claimable_stbb": "888534894260304437977"
+	},
+	{
+		"user": "0xC2f394890de4c061E044202D0bf07712089a4fc0",
+		"stbz_balance": "133052804746873247770",
+		"eligible_stbz_balance": "133052804746873247770",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "133052804746873247770"
+	},
+	{
+		"user": "0x89432d45feD626eF7F7eE4E213C37cB66d1bEF69",
+		"stbz_balance": "173877741648711956204",
+		"eligible_stbz_balance": "173877741648711956204",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "173877741648711956204"
+	},
+	{
+		"user": "0xACe0315Fa6a085640dd78EFacee7016154ab06C7",
+		"stbz_balance": "133863869337015088715",
+		"eligible_stbz_balance": "133863869337015088715",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "133863869337015088715"
+	},
+	{
+		"user": "0x8BEF019e9A956eD394a09f73030dD05e7C764Cad",
+		"stbz_balance": "393645525312731860719",
+		"eligible_stbz_balance": "393645525312731860719",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "393645525312731860719"
+	},
+	{
+		"user": "0x58d4Ae33169fad08b0d5124E0138395A0fcDe869",
+		"stbz_balance": "531902960879990177994",
+		"eligible_stbz_balance": "531902960879990177994",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "531902960879990177994"
+	},
+	{
+		"user": "0x513C1fdDbb8C399311ca5a9585426EC934E81584",
+		"stbz_balance": "2227955129019767524121",
+		"eligible_stbz_balance": "2227955129019767524121",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "2227955129019767524121"
+	},
+	{
+		"user": "0x492DFBeEd98c18F3e9899b6326dd4d52E5A97aa3",
+		"stbz_balance": "100000000000000000000",
+		"eligible_stbz_balance": "100000000000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "100000000000000000000"
+	},
+	{
+		"user": "0x71180C7617489d1B2c88A3D26d960C2Ded8ea648",
+		"stbz_balance": "267537858851085353616",
+		"eligible_stbz_balance": "267537858851085353616",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "267537858851085353616"
+	},
+	{
+		"user": "0x3D76094262787c7216C7486f0270FA045ad9C9bd",
+		"stbz_balance": "409486595344479430511",
+		"eligible_stbz_balance": "409486595344479430511",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "409486595344479430511"
+	},
+	{
+		"user": "0x8d0d23dced0B3301ea4A433fE7A06dEb211a5438",
+		"stbz_balance": "229000613008233104670",
+		"eligible_stbz_balance": "229000613008233104670",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "229000613008233104670"
+	},
+	{
+		"user": "0x0c9F60dc68AD96271907c5f692DB9b81e8c0742C",
+		"stbz_balance": "329345206993981307537",
+		"eligible_stbz_balance": "329345206993981307537",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "329345206993981307537"
+	},
+	{
+		"user": "0xA481C3b5a8c8A2De0ebA80eAfFB400212faD8d52",
+		"stbz_balance": "115894690037490467655",
+		"eligible_stbz_balance": "115894690037490467655",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "115894690037490467655"
+	},
+	{
+		"user": "0x450ABd0067eeeDA0Ff0C7F4317FB12259Aae1f98",
+		"stbz_balance": "268488605085623776098",
+		"eligible_stbz_balance": "268488605085623776098",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "268488605085623776098"
+	},
+	{
+		"user": "0xe304666CBbF6f836Fb97F235999b17352b74Cac7",
+		"stbz_balance": "530690812573112028050",
+		"eligible_stbz_balance": "530690812573112028050",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "530690812573112028050"
+	},
+	{
+		"user": "0xBCB014AB5b2AA0D71b3e53Fe47AE0EB67ab97D7d",
+		"stbz_balance": "1151192597993042191283",
+		"eligible_stbz_balance": "1151192597993042191283",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "1151192597993042191283"
+	},
+	{
+		"user": "0x33606a65801bE4Cdd0C40C1e6B59F13165352E50",
+		"stbz_balance": "192550721342903539572",
+		"eligible_stbz_balance": "192550721342903539572",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "192550721342903539572"
+	},
+	{
+		"user": "0xDf6dC30bC460b4702A92b0609f6482b81Cfa5849",
+		"stbz_balance": "933204690569044004143",
+		"eligible_stbz_balance": "933204690569044004143",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "933204690569044004143"
+	},
+	{
+		"user": "0x88106c0563f06eb76008D8D21fAddDc5c2D156d9",
+		"stbz_balance": "199610672188282376531",
+		"eligible_stbz_balance": "199610672188282376531",
+		"stol_balance": "2774123831601111837968",
+		"boosted": "true",
+		"bonus": "59883201656484712959",
+		"claimable_stbb": "259493873844767089490"
+	},
+	{
+		"user": "0x9C7dFe906b92F7ee24A241BE184e04150ff1427c",
+		"stbz_balance": "767208884090118305694",
+		"eligible_stbz_balance": "767208884090118305694",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "767208884090118305694"
+	},
+	{
+		"user": "0xECC96e1dACd78A07ABCd06019b662E16529F7fC5",
+		"stbz_balance": "201077028354246921838",
+		"eligible_stbz_balance": "201077028354246921838",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "201077028354246921838"
+	},
+	{
+		"user": "0x6126CfC4a8e7101db8DC8908e135a0fD48548ca3",
+		"stbz_balance": "594456630688607569034",
+		"eligible_stbz_balance": "594456630688607569034",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "594456630688607569034"
+	},
+	{
+		"user": "0x33d5C9f20F219D4BB6a041D9f66f1b57cD3dfFd0",
+		"stbz_balance": "207715096648965274140",
+		"eligible_stbz_balance": "207715096648965274140",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "207715096648965274140"
+	},
+	{
+		"user": "0x377d23E9b375583Fde28db846366adFE551eD307",
+		"stbz_balance": "813747545956566294037",
+		"eligible_stbz_balance": "813747545956566294037",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "813747545956566294037"
+	},
+	{
+		"user": "0x216f436F82a0FA61AA381dbfb9530ccE8E7188Cf",
+		"stbz_balance": "341526482796197134086",
+		"eligible_stbz_balance": "341526482796197134086",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "341526482796197134086"
+	},
+	{
+		"user": "0x033f5E40e22C95fCA21F98C03F19Fdf83aD16E3E",
+		"stbz_balance": "359404296579912686381",
+		"eligible_stbz_balance": "359404296579912686381",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "359404296579912686381"
+	},
+	{
+		"user": "0x1Bc2318e95407CF0fDf21673425De5Cda9Cd6B13",
+		"stbz_balance": "265072837524112253973",
+		"eligible_stbz_balance": "265072837524112253973",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "265072837524112253973"
+	},
+	{
+		"user": "0x733dd798B33F930C5D1A2bc85D04Bf12E47697e3",
+		"stbz_balance": "112584873579226309838",
+		"eligible_stbz_balance": "112584873579226309838",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "112584873579226309838"
+	},
+	{
+		"user": "0x497ecf34659c97afb61CE2fC56a80AD08e5525Fe",
+		"stbz_balance": "100000000000000000000",
+		"eligible_stbz_balance": "100000000000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "100000000000000000000"
+	},
+	{
+		"user": "0xc453cdC129892AeC86403fC3e71de861e0E86a9D",
+		"stbz_balance": "1423639154202114561457",
+		"eligible_stbz_balance": "1423639154202114561457",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "1423639154202114561457"
+	},
+	{
+		"user": "0x4A9AAF2F24cad09c88979CEd40bBF94A7C34b54a",
+		"stbz_balance": "301031702767919047536",
+		"eligible_stbz_balance": "301031702767919047536",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "301031702767919047536"
+	},
+	{
+		"user": "0xB9B22D0be8f8f916e907374Be314D87E9D4e38a0",
+		"stbz_balance": "554980596518324178108",
+		"eligible_stbz_balance": "554980596518324178108",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "554980596518324178108"
+	},
+	{
+		"user": "0xe1abC585a258454095357442E2A709F980D4e6fA",
+		"stbz_balance": "148770742488937320881",
+		"eligible_stbz_balance": "148770742488937320881",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "148770742488937320881"
+	},
+	{
+		"user": "0x9F1068160115e8a90FCF9D32cEFD559f6C35B263",
+		"stbz_balance": "354557357599447244967",
+		"eligible_stbz_balance": "354557357599447244967",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "354557357599447244967"
+	},
+	{
+		"user": "0xbae4fa2C752f2ABd6deD5A5A0167d58382242E00",
+		"stbz_balance": "138964530871018876374",
+		"eligible_stbz_balance": "138964530871018876374",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "138964530871018876374"
+	},
+	{
+		"user": "0x99f4BbaA27Ed9684817545846D65B3Cb1ed51ddb",
+		"stbz_balance": "1599150880484981346624",
+		"eligible_stbz_balance": "1599150880484981346624",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "1599150880484981346624"
+	},
+	{
+		"user": "0x15D6D9f31792B6cBCe158380285922FB81e924f1",
+		"stbz_balance": "813069306274671949179",
+		"eligible_stbz_balance": "813069306274671949179",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "813069306274671949179"
+	},
+	{
+		"user": "0x6644Af2BA9D83dFcAAA2A356eda105e5946D0D76",
+		"stbz_balance": "6079036810183610580205",
+		"eligible_stbz_balance": "6079036810183610580205",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "6079036810183610580205"
+	},
+	{
+		"user": "0xd91b72B26909C3982782BE5e9402FF0442b803F4",
+		"stbz_balance": "340944811868546553741",
+		"eligible_stbz_balance": "340944811868546553741",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "340944811868546553741"
+	},
+	{
+		"user": "0x6A73825d7dd975b8De5813DCFaa207A8f7702530",
+		"stbz_balance": "114219701223634326231",
+		"eligible_stbz_balance": "114219701223634326231",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "114219701223634326231"
+	},
+	{
+		"user": "0x2a35f4d497d52802A48765Ac2dA83224A56f1209",
+		"stbz_balance": "597248680292197967851",
+		"eligible_stbz_balance": "597248680292197967851",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "597248680292197967851"
+	},
+	{
+		"user": "0x6ebd9388ff8D3850d677904Ce076753fB5c58047",
+		"stbz_balance": "171893530155558473250",
+		"eligible_stbz_balance": "171893530155558473250",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "171893530155558473250"
+	},
+	{
+		"user": "0x51c93058Fd3dE365F60BC93DFEA6789a84235ef2",
+		"stbz_balance": "391578459247140782571",
+		"eligible_stbz_balance": "391578459247140782571",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "391578459247140782571"
+	},
+	{
+		"user": "0x5666866fD0075013fC4e9DE4CbBCdFA6E71B7eF5",
+		"stbz_balance": "942674734366026347602",
+		"eligible_stbz_balance": "942674734366026347602",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "942674734366026347602"
+	},
+	{
+		"user": "0x6809Ca2A96607D01583E865BE44ad49853173C8b",
+		"stbz_balance": "119028324889064289373",
+		"eligible_stbz_balance": "119028324889064289373",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "119028324889064289373"
+	},
+	{
+		"user": "0xf39C3c48b3d100e311F0Dc7590D44E512ad54508",
+		"stbz_balance": "327443834371522077146",
+		"eligible_stbz_balance": "327443834371522077146",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "327443834371522077146"
+	},
+	{
+		"user": "0x94A4F812B3448C13ef6D8FA64e63B0d3dec6a7fb",
+		"stbz_balance": "470307444731073728260",
+		"eligible_stbz_balance": "470307444731073728260",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "470307444731073728260"
+	},
+	{
+		"user": "0x3593040F9275B98ACE0D149502336459295de54b",
+		"stbz_balance": "363400901807625159558",
+		"eligible_stbz_balance": "363400901807625159558",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "363400901807625159558"
+	},
+	{
+		"user": "0x2a74b4e05BB82C03c17FaDd73b13F5b651597E65",
+		"stbz_balance": "619796665694260908959",
+		"eligible_stbz_balance": "619796665694260908959",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "619796665694260908959"
+	},
+	{
+		"user": "0x0Eb69d54D39931226382F12bFD5Ef8B5b41847A4",
+		"stbz_balance": "297175028287025040187",
+		"eligible_stbz_balance": "297175028287025040187",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "297175028287025040187"
+	},
+	{
+		"user": "0x8eAe68E30B617f4bf33cfbaFFedE3Dc5E6BaA436",
+		"stbz_balance": "101000000000000000000",
+		"eligible_stbz_balance": "101000000000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "101000000000000000000"
+	},
+	{
+		"user": "0x5C3D46b478b8dFCbAdE9322255CA0a44BE9c951D",
+		"stbz_balance": "300000000000000000000",
+		"eligible_stbz_balance": "300000000000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "300000000000000000000"
+	},
+	{
+		"user": "0x39bbb8c321fdF88804C4f82487cb91115F1eC780",
+		"stbz_balance": "489594657559687788148",
+		"eligible_stbz_balance": "489594657559687788148",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "489594657559687788148"
+	},
+	{
+		"user": "0x34c1312eB56faC152BBfCDD8F5969dFe4eF1Ce00",
+		"stbz_balance": "257110000000000000000",
+		"eligible_stbz_balance": "257110000000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "257110000000000000000"
+	},
+	{
+		"user": "0xb7179759e5Bc6348d9f4F00A6c82Fc462A52D541",
+		"stbz_balance": "454565200000000000000",
+		"eligible_stbz_balance": "454565200000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "454565200000000000000"
+	},
+	{
+		"user": "0x90814c1f1FA23069B761dbf4f4714173455DBE6B",
+		"stbz_balance": "327266904538551856404",
+		"eligible_stbz_balance": "327266904538551856404",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "327266904538551856404"
+	},
+	{
+		"user": "0x97Bf15242e152F58A20611f5C3d81197E7D7C8f4",
+		"stbz_balance": "230142679487776531484",
+		"eligible_stbz_balance": "230142679487776531484",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "230142679487776531484"
+	},
+	{
+		"user": "0x1443d22A4460a526E752EaaFB34d172B688d17b4",
+		"stbz_balance": "719466797704822770658",
+		"eligible_stbz_balance": "719466797704822770658",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "719466797704822770658"
+	},
+	{
+		"user": "0x86f4499e3a8C1A2ebf53d624d9a6ea9e00D377F3",
+		"stbz_balance": "2927129594339929161134",
+		"eligible_stbz_balance": "2927129594339929161134",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "2927129594339929161134"
+	},
+	{
+		"user": "0x12534DAEA22445e3B47F09E2E0BE3B37E06431Ca",
+		"stbz_balance": "3946758198573138334264",
+		"eligible_stbz_balance": "3946758198573138334264",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "3946758198573138334264"
+	},
+	{
+		"user": "0x0E30D605892dB45e830da27e182fabA7b0aF2117",
+		"stbz_balance": "1637169580715189808300",
+		"eligible_stbz_balance": "1637169580715189808300",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "1637169580715189808300"
+	},
+	{
+		"user": "0xC62BF716CD251eBf05bB451D9c537d709EA0271A",
+		"stbz_balance": "295309824888277323706",
+		"eligible_stbz_balance": "295309824888277323706",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "295309824888277323706"
+	},
+	{
+		"user": "0x2076AA28bb8c0A1bC0cA2B619247D35c9cDe16d4",
+		"stbz_balance": "556120536812432198808",
+		"eligible_stbz_balance": "556120536812432198808",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "556120536812432198808"
+	},
+	{
+		"user": "0xc26807bDa2A94b7AaF8EF2685a9FFF81aa58DD03",
+		"stbz_balance": "476154124038702631290",
+		"eligible_stbz_balance": "476154124038702631290",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "476154124038702631290"
+	},
+	{
+		"user": "0x35c26CFa7BE6013b61CE21a40c83Dd4498Fcb212",
+		"stbz_balance": "102002204883919201292",
+		"eligible_stbz_balance": "102002204883919201292",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "102002204883919201292"
+	},
+	{
+		"user": "0xc40b6A4606e43636E3bC235063CA86EC0462a842",
+		"stbz_balance": "2267351744129113215497",
+		"eligible_stbz_balance": "2267351744129113215497",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "2267351744129113215497"
+	},
+	{
+		"user": "0x13cbF5b43d1a28Fd23b3B13B4F3ed124D5520417",
+		"stbz_balance": "1952354265255284824208",
+		"eligible_stbz_balance": "1952354265255284824208",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "1952354265255284824208"
+	},
+	{
+		"user": "0xAb7E15dcA2cf21d49E27812F439aC398dc9B37A8",
+		"stbz_balance": "1726574076678128760008",
+		"eligible_stbz_balance": "1726574076678128760008",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "1726574076678128760008"
+	},
+	{
+		"user": "0xafE0F1100664D7F01B74dfC36B0e39425E941501",
+		"stbz_balance": "15868629171705314359434",
+		"eligible_stbz_balance": "15868629171705314359434",
+		"stol_balance": "20310452504224458594470",
+		"boosted": "true",
+		"bonus": "4760588751511594307830",
+		"claimable_stbb": "20629217923216908667264"
+	},
+	{
+		"user": "0x556DAAc486cFE0D7F9334d7E73F07F299E68a969",
+		"stbz_balance": "372058800000000000000",
+		"eligible_stbz_balance": "372058800000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "372058800000000000000"
+	},
+	{
+		"user": "0x2a1B9261cBD393Bd591894ef561639757F8E4B70",
+		"stbz_balance": "300000000000000000000",
+		"eligible_stbz_balance": "300000000000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "300000000000000000000"
+	},
+	{
+		"user": "0xf975F1172E15699224Ab06e85E37Df55f2c436E3",
+		"stbz_balance": "1492587912764058585618",
+		"eligible_stbz_balance": "1492587912764058585618",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "1492587912764058585618"
+	},
+	{
+		"user": "0xCb91779a29cA7c1C351e14b9920c104AD748e47f",
+		"stbz_balance": "123147505849612447171",
+		"eligible_stbz_balance": "123147505849612447171",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "123147505849612447171"
+	},
+	{
+		"user": "0x4cEC4A659255868515a7aaa386B029Fa1f57a341",
+		"stbz_balance": "378769249947121083423",
+		"eligible_stbz_balance": "378769249947121083423",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "378769249947121083423"
+	},
+	{
+		"user": "0x3E7dd7DF9C1FfD12B8ecD94A27472BDc4d87AB7E",
+		"stbz_balance": "209583727936835407071",
+		"eligible_stbz_balance": "209583727936835407071",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "209583727936835407071"
+	},
+	{
+		"user": "0xF93e9092EC02230ca32425deECf91Ad91B583b99",
+		"stbz_balance": "300560251957281432708",
+		"eligible_stbz_balance": "300560251957281432708",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "300560251957281432708"
+	},
+	{
+		"user": "0x1E5F7e7A6fc30250C4c97daB1d7bb314F96CE81e",
+		"stbz_balance": "126505629736160831423",
+		"eligible_stbz_balance": "126505629736160831423",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "126505629736160831423"
+	},
+	{
+		"user": "0x141CA67B0F1B7CC619307D2F853fb8037BffF4A8",
+		"stbz_balance": "2424139988062465345892",
+		"eligible_stbz_balance": "2424139988062465345892",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "2424139988062465345892"
+	},
+	{
+		"user": "0x7e2a3694256E13705eb7924649e5E267F5BC5398",
+		"stbz_balance": "5992229610641847464550",
+		"eligible_stbz_balance": "5992229610641847464550",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "5992229610641847464550"
+	},
+	{
+		"user": "0xB97A925d8027E8633c2aADd377260F9d0126F7f1",
+		"stbz_balance": "2001847389609407979932",
+		"eligible_stbz_balance": "2001847389609407979932",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "2001847389609407979932"
+	},
+	{
+		"user": "0x95e419A176CfA4d9E163D3e6d1A3b10Dcb1eAC54",
+		"stbz_balance": "150000000000000000000",
+		"eligible_stbz_balance": "150000000000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "150000000000000000000"
+	},
+	{
+		"user": "0xFfC041B1c734f8bC0502A9Fc0d7c35AB437C416d",
+		"stbz_balance": "8600625739923315136092",
+		"eligible_stbz_balance": "8600625739923315136092",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "8600625739923315136092"
+	},
+	{
+		"user": "0x26d13C17659e1305344eE31635B5A2b72e94d82E",
+		"stbz_balance": "1011527954039121048185",
+		"eligible_stbz_balance": "1011527954039121048185",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "1011527954039121048185"
+	},
+	{
+		"user": "0x4BdF57007Be460B851575D833D6b4CA0621A0526",
+		"stbz_balance": "101898631478688408134",
+		"eligible_stbz_balance": "101898631478688408134",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "101898631478688408134"
+	},
+	{
+		"user": "0x2711057F0090934947AE77c2203E2061211Ccaf1",
+		"stbz_balance": "548868366082821919618",
+		"eligible_stbz_balance": "548868366082821919618",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "548868366082821919618"
+	},
+	{
+		"user": "0xBe23CbB62064b8B1550Ae5ADA59c39d45b1E2081",
+		"stbz_balance": "4000000000000000000000",
+		"eligible_stbz_balance": "4000000000000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "4000000000000000000000"
+	},
+	{
+		"user": "0xA38726B171e8392D4E99E521951C8e97B435b095",
+		"stbz_balance": "118618721485528389921",
+		"eligible_stbz_balance": "118618721485528389921",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "118618721485528389921"
+	},
+	{
+		"user": "0xBAa5e9532F21FA10cecBf8CD34961b66e90AF581",
+		"stbz_balance": "1382552510428600417289",
+		"eligible_stbz_balance": "1382552510428600417289",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "1382552510428600417289"
+	},
+	{
+		"user": "0xdcfd6D6e63F15A391D96D1b76575Ae39Ad6965D9",
+		"stbz_balance": "191965390772214311011",
+		"eligible_stbz_balance": "191965390772214311011",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "191965390772214311011"
+	},
+	{
+		"user": "0xB3968BB594166a597AE4285220C6ae0eBBA6A1B2",
+		"stbz_balance": "623357839824744479699",
+		"eligible_stbz_balance": "623357839824744479699",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "623357839824744479699"
+	},
+	{
+		"user": "0x40352982EDaB8d461FFBD7Be5fd45FB22dCeF34B",
+		"stbz_balance": "1734318101265533670261",
+		"eligible_stbz_balance": "1734318101265533670261",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "1734318101265533670261"
+	},
+	{
+		"user": "0x6896625252CD1410425465Bc0790E232Aa7DD978",
+		"stbz_balance": "926521897429021883614",
+		"eligible_stbz_balance": "926521897429021883614",
+		"stol_balance": "1104873389596578138656",
+		"boosted": "true",
+		"bonus": "277956569228706565084",
+		"claimable_stbb": "1204478466657728448698"
+	},
+	{
+		"user": "0xf3a05D6007A41E48F2C9A3edd029351EaDDEfCC6",
+		"stbz_balance": "184534286429597895701",
+		"eligible_stbz_balance": "184534286429597895701",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "184534286429597895701"
+	},
+	{
+		"user": "0xfB5f9a306118C728Ca5A369759756a430aFC3669",
+		"stbz_balance": "112000000000000000000",
+		"eligible_stbz_balance": "112000000000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "112000000000000000000"
+	},
+	{
+		"user": "0xBb8466c603CaC6129946235af3A09770B672998c",
+		"stbz_balance": "512138940766387934214",
+		"eligible_stbz_balance": "512138940766387934214",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "512138940766387934214"
+	},
+	{
+		"user": "0x9b784115b32113907ca5222E660ed15F17837Afa",
+		"stbz_balance": "423048186792906068388",
+		"eligible_stbz_balance": "423048186792906068388",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "423048186792906068388"
+	},
+	{
+		"user": "0xE8c336C5F7bd4d5cc34A239eB0e84c9d74b2a1EE",
+		"stbz_balance": "507038876279141457897",
+		"eligible_stbz_balance": "507038876279141457897",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "507038876279141457897"
+	},
+	{
+		"user": "0xc61AB3b885E6E2D31D95F254B660f70E1d04104b",
+		"stbz_balance": "148871928295640933999",
+		"eligible_stbz_balance": "148871928295640933999",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "148871928295640933999"
+	},
+	{
+		"user": "0xF6c3c3621F42Ec1F1CD1207Bb1571d93646Ab29A",
+		"stbz_balance": "162349206997883613700",
+		"eligible_stbz_balance": "162349206997883613700",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "162349206997883613700"
+	},
+	{
+		"user": "0xff251ecF1F9c69e56682a8bB76FA74C86918e8E4",
+		"stbz_balance": "390959983904955806886",
+		"eligible_stbz_balance": "390959983904955806886",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "390959983904955806886"
+	},
+	{
+		"user": "0x4AF75F6A6671c6EDCB77e802dB62D1161F7C1145",
+		"stbz_balance": "155703300993238820397",
+		"eligible_stbz_balance": "155703300993238820397",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "155703300993238820397"
+	},
+	{
+		"user": "0x151F6285D5F64e491ee5F2c059B1C0E15b12D4E0",
+		"stbz_balance": "309392814541853519477",
+		"eligible_stbz_balance": "309392814541853519477",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "309392814541853519477"
+	},
+	{
+		"user": "0x08B25a609B7cEccf8c0aa94bC78eb652Cdd9D876",
+		"stbz_balance": "100000000000000000000",
+		"eligible_stbz_balance": "100000000000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "100000000000000000000"
+	},
+	{
+		"user": "0xd9021a570f67ABD4bb3B5768A92bdd28FcCcd4D0",
+		"stbz_balance": "104820878803258159305",
+		"eligible_stbz_balance": "104820878803258159305",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "104820878803258159305"
+	},
+	{
+		"user": "0x0f2FeEBB9114a7d61C43c0d12B62266982Eb65a5",
+		"stbz_balance": "104228639123607358899",
+		"eligible_stbz_balance": "104228639123607358899",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "104228639123607358899"
+	},
+	{
+		"user": "0x6CD2350169f889C1DE870f253199a750d3d99e63",
+		"stbz_balance": "587167332895906278037",
+		"eligible_stbz_balance": "587167332895906278037",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "587167332895906278037"
+	},
+	{
+		"user": "0x78Cf7Ef0c16a861A8e70B63470F225CD6074648f",
+		"stbz_balance": "316409272582378041423",
+		"eligible_stbz_balance": "316409272582378041423",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "316409272582378041423"
+	},
+	{
+		"user": "0x11b82a90b3Ba3ae5C7D430980cA10e8cE208c1c3",
+		"stbz_balance": "301267118047301283194",
+		"eligible_stbz_balance": "301267118047301283194",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "301267118047301283194"
+	},
+	{
+		"user": "0xDC59cEd5496ED4D9cA5dd49A49eF5e920036e906",
+		"stbz_balance": "374666976150936109650",
+		"eligible_stbz_balance": "374666976150936109650",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "374666976150936109650"
+	},
+	{
+		"user": "0x83c31FB5c9DE5E98D0beF8Fd63ECF9249fCbfdf1",
+		"stbz_balance": "216234769358620952994",
+		"eligible_stbz_balance": "216234769358620952994",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "216234769358620952994"
+	},
+	{
+		"user": "0x350A98900329AcBEaFF0e5296b00a3D1E3A335f4",
+		"stbz_balance": "1201305673306503658028",
+		"eligible_stbz_balance": "1201305673306503658028",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "1201305673306503658028"
+	},
+	{
+		"user": "0xDBC13E67F678Cc00591920ceCe4dCa6322a79AC7",
+		"stbz_balance": "327202054029575132748",
+		"eligible_stbz_balance": "327202054029575132748",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "327202054029575132748"
+	},
+	{
+		"user": "0xA0179e52a3544ECde7E84E9A7075083569e3f191",
+		"stbz_balance": "1016718639560690654031",
+		"eligible_stbz_balance": "1016718639560690654031",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "1016718639560690654031"
+	},
+	{
+		"user": "0x923B8faC614724303f66a5AB2724C5600Ce96b13",
+		"stbz_balance": "121726222491442267893",
+		"eligible_stbz_balance": "121726222491442267893",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "121726222491442267893"
+	},
+	{
+		"user": "0x787e6870754Cc306C1758db62DC6Cd334bA76345",
+		"stbz_balance": "100000000000000000000",
+		"eligible_stbz_balance": "100000000000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "100000000000000000000"
+	},
+	{
+		"user": "0x63dCb63988d88c5E1231Dcce3d79c50f9AB9d7F8",
+		"stbz_balance": "117742563748694776984",
+		"eligible_stbz_balance": "117742563748694776984",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "117742563748694776984"
+	},
+	{
+		"user": "0x396112146855b577F82E5cF938aC8064F5Ff3A5e",
+		"stbz_balance": "105000000000000000000",
+		"eligible_stbz_balance": "105000000000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "105000000000000000000"
+	},
+	{
+		"user": "0x618f982713dD510bDe8Ee77079ad0B6C14f89258",
+		"stbz_balance": "571830294657968836735",
+		"eligible_stbz_balance": "571830294657968836735",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "571830294657968836735"
+	},
+	{
+		"user": "0xc28C6b4bcb10AB2c0Ef88925693FdDA77CeA38ce",
+		"stbz_balance": "312445345621912423800",
+		"eligible_stbz_balance": "312445345621912423800",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "312445345621912423800"
+	},
+	{
+		"user": "0x3494FD02510b136d781ae310324e293AC9a8eBDa",
+		"stbz_balance": "135988860117911089824",
+		"eligible_stbz_balance": "135988860117911089824",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "135988860117911089824"
+	},
+	{
+		"user": "0x449B874860e49387D0bA96243324E0ab9c826A22",
+		"stbz_balance": "136828309345948122583",
+		"eligible_stbz_balance": "136828309345948122583",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "136828309345948122583"
+	},
+	{
+		"user": "0x49C8c6301Fe4DB765205DaA67091a02bC4698220",
+		"stbz_balance": "508186593919782917983",
+		"eligible_stbz_balance": "508186593919782917983",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "508186593919782917983"
+	},
+	{
+		"user": "0xA8DBc1Ee88a30EFEef9692E7476620279e8f95Db",
+		"stbz_balance": "125000000000000000000",
+		"eligible_stbz_balance": "125000000000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "125000000000000000000"
+	},
+	{
+		"user": "0x2e90606D7c5F13BbaBD54188c9c84f58Ab400570",
+		"stbz_balance": "6380294755726146411910",
+		"eligible_stbz_balance": "6380294755726146411910",
+		"stol_balance": "6722477678587133017297",
+		"boosted": "true",
+		"bonus": "1914088426717843923573",
+		"claimable_stbb": "8294383182443990335483"
+	},
+	{
+		"user": "0x69b8A24edc9053b3D007710E7B986dF40a0BC7eb",
+		"stbz_balance": "573956478907060825441",
+		"eligible_stbz_balance": "573956478907060825441",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "573956478907060825441"
+	},
+	{
+		"user": "0xAa75afF2452826BfE3cdfcdc2B579935D168B71e",
+		"stbz_balance": "200000000000000000000",
+		"eligible_stbz_balance": "200000000000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "200000000000000000000"
+	},
+	{
+		"user": "0x49E59dE5DBF06ED83116AfAA0570Bfe13a8D5bA7",
+		"stbz_balance": "202000000000000000000",
+		"eligible_stbz_balance": "202000000000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "202000000000000000000"
+	},
+	{
+		"user": "0x66B298b86F1940dAc6ff881195cE8d6a7b05B11f",
+		"stbz_balance": "175927819467929146921",
+		"eligible_stbz_balance": "175927819467929146921",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "175927819467929146921"
+	},
+	{
+		"user": "0xa9BdADCE387700B18a3D5c2a668395bDAdc7b76B",
+		"stbz_balance": "1012573743160221210970",
+		"eligible_stbz_balance": "1012573743160221210970",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "1012573743160221210970"
+	},
+	{
+		"user": "0xcCCe3B80bd58F1dB206458Dbca45be049Cfd8557",
+		"stbz_balance": "3360758255359923248798",
+		"eligible_stbz_balance": "3360758255359923248798",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "3360758255359923248798"
+	},
+	{
+		"user": "0x241589B31e1B683C4b9BD79Ceae807c6C123472A",
+		"stbz_balance": "226503314562208180544",
+		"eligible_stbz_balance": "226503314562208180544",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "226503314562208180544"
+	},
+	{
+		"user": "0xc5aae2f980Ed7BAe291560Ce56AeC7DEDdC8A523",
+		"stbz_balance": "158596505214382507172",
+		"eligible_stbz_balance": "158596505214382507172",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "158596505214382507172"
+	},
+	{
+		"user": "0x494Df7fE76a872Ffcb60F52CA5ef1D7382dBD0C3",
+		"stbz_balance": "237426325982611223489",
+		"eligible_stbz_balance": "237426325982611223489",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "237426325982611223489"
+	},
+	{
+		"user": "0xAEAcdc16E26A30ad2b6EaFbf60DA32f551A7AAC1",
+		"stbz_balance": "173293326007304289562",
+		"eligible_stbz_balance": "173293326007304289562",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "173293326007304289562"
+	},
+	{
+		"user": "0x5Fea945A127008eBC01Dc7342E9ef8486aD5b4bd",
+		"stbz_balance": "222767370566534207342",
+		"eligible_stbz_balance": "222767370566534207342",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "222767370566534207342"
+	},
+	{
+		"user": "0x6b06c0aB70549118373F51265f05b1c0fA0873F7",
+		"stbz_balance": "105064789179178075740",
+		"eligible_stbz_balance": "105064789179178075740",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "105064789179178075740"
+	},
+	{
+		"user": "0x231df09EB8eD3668A750bB3c327629236fD4908e",
+		"stbz_balance": "178479685218235964575",
+		"eligible_stbz_balance": "178479685218235964575",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "178479685218235964575"
+	},
+	{
+		"user": "0x5E810c7f0065f6295aDAbF3203922f77B14EE099",
+		"stbz_balance": "486626737218405716877",
+		"eligible_stbz_balance": "486626737218405716877",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "486626737218405716877"
+	},
+	{
+		"user": "0x67ceF7Cce7803a7537cA4a2A7aA54B5DD577DEBB",
+		"stbz_balance": "342350542452912960231",
+		"eligible_stbz_balance": "342350542452912960231",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "342350542452912960231"
+	},
+	{
+		"user": "0x1F2f40fD6770Da2bb833825A1DfD230238e4ECDB",
+		"stbz_balance": "360597764094376005884",
+		"eligible_stbz_balance": "360597764094376005884",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "360597764094376005884"
+	},
+	{
+		"user": "0x685e7EF0bbd1396D0981f788b4875897D85040ec",
+		"stbz_balance": "101061506971750088981",
+		"eligible_stbz_balance": "101061506971750088981",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "101061506971750088981"
+	},
+	{
+		"user": "0xaDbb744a9434AAd006772CF76e79D246c4506D1B",
+		"stbz_balance": "1401242468033225475877",
+		"eligible_stbz_balance": "1401242468033225475877",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "1401242468033225475877"
+	},
+	{
+		"user": "0xA27d7009CBeFACa06a7314E65E5182F76D0EB22e",
+		"stbz_balance": "104492659645167725361",
+		"eligible_stbz_balance": "104492659645167725361",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "104492659645167725361"
+	},
+	{
+		"user": "0xD6AfBA144ef7eDCF9597283F61BBA2F8d988032e",
+		"stbz_balance": "1126910982886137358560",
+		"eligible_stbz_balance": "1126910982886137358560",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "1126910982886137358560"
+	},
+	{
+		"user": "0x451EcD8E9B8A5e6A67B6622987b12AB39e9Be1A0",
+		"stbz_balance": "1968117519421800553818",
+		"eligible_stbz_balance": "1968117519421800553818",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "1968117519421800553818"
+	},
+	{
+		"user": "0xD8dBfd62956727D2Caf18FaD58D69975326c8534",
+		"stbz_balance": "704701519156240453921",
+		"eligible_stbz_balance": "704701519156240453921",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "704701519156240453921"
+	},
+	{
+		"user": "0x18C32d617b4DBcc8F1F2D77842535f09Ff56CB3E",
+		"stbz_balance": "362007207664567457715",
+		"eligible_stbz_balance": "362007207664567457715",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "362007207664567457715"
+	},
+	{
+		"user": "0xC2634B9d0A0cFb756cDed34656E09828072A8a9B",
+		"stbz_balance": "1331578546919232829483",
+		"eligible_stbz_balance": "1331578546919232829483",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "1331578546919232829483"
+	},
+	{
+		"user": "0x96c825a14934a121E60FC3B2D5926B0f1f47802c",
+		"stbz_balance": "101000000000000000000",
+		"eligible_stbz_balance": "101000000000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "101000000000000000000"
+	},
+	{
+		"user": "0xf22ab2E1bbad2219d2F220cDCd317E223e172D61",
+		"stbz_balance": "208082218394121205180",
+		"eligible_stbz_balance": "208082218394121205180",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "208082218394121205180"
+	},
+	{
+		"user": "0x1Cb86Ee06CD27d7045D2849BF342FcF5ef2a7D12",
+		"stbz_balance": "101000000000000000000",
+		"eligible_stbz_balance": "101000000000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "101000000000000000000"
+	},
+	{
+		"user": "0xE195f766beca567Fb55861dAA046021B98B1DA12",
+		"stbz_balance": "100000000000000000000",
+		"eligible_stbz_balance": "100000000000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "100000000000000000000"
+	},
+	{
+		"user": "0xb63a5C5710F06e111fa14AC82dA2183C5102B504",
+		"stbz_balance": "698190034460989646959",
+		"eligible_stbz_balance": "698190034460989646959",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "698190034460989646959"
+	},
+	{
+		"user": "0xA1830E8d9F019FEB448478a171Bb37Cc6C4c0482",
+		"stbz_balance": "2144399457396319319376",
+		"eligible_stbz_balance": "2144399457396319319376",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "2144399457396319319376"
+	},
+	{
+		"user": "0x65b27BA7362ce3f241DAfDFC03Ef24D080e41413",
+		"stbz_balance": "160000000000000000000",
+		"eligible_stbz_balance": "160000000000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "160000000000000000000"
+	},
+	{
+		"user": "0xCf460FEC0F1552b44A72fB5BB237fACE63227F47",
+		"stbz_balance": "390703218675142643355",
+		"eligible_stbz_balance": "390703218675142643355",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "390703218675142643355"
+	},
+	{
+		"user": "0xd8eb0F6C4473EB995F5CC38B879De382861d429B",
+		"stbz_balance": "108459285682004429941",
+		"eligible_stbz_balance": "108459285682004429941",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "108459285682004429941"
+	},
+	{
+		"user": "0xe9C0A1a083B6e91A48782DCd558b7866E9DE09CA",
+		"stbz_balance": "512557527995073627816",
+		"eligible_stbz_balance": "512557527995073627816",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "512557527995073627816"
+	},
+	{
+		"user": "0xE08726c1C52FF13450BfFdeC9221AB7cE708cea0",
+		"stbz_balance": "100000000000000000000",
+		"eligible_stbz_balance": "100000000000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "100000000000000000000"
+	},
+	{
+		"user": "0x9CC81A1AF762C954Ea0954BCcE97F0CdCa397F1e",
+		"stbz_balance": "201000000000000000000",
+		"eligible_stbz_balance": "201000000000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "201000000000000000000"
+	},
+	{
+		"user": "0xC181319E3c0127a0E71b74c0ACF19CF40983DA81",
+		"stbz_balance": "519353916754685308382",
+		"eligible_stbz_balance": "519353916754685308382",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "519353916754685308382"
+	},
+	{
+		"user": "0x83d9A8549444D76743B08924BdA15b118C84008B",
+		"stbz_balance": "4971081046642131946814",
+		"eligible_stbz_balance": "4971081046642131946814",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "4971081046642131946814"
+	},
+	{
+		"user": "0x1e45120B1e8755EdfD10f6C730f18D2c6a36f539",
+		"stbz_balance": "765066449814293239107",
+		"eligible_stbz_balance": "765066449814293239107",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "765066449814293239107"
+	},
+	{
+		"user": "0x130DCcc9EfA338C3e5fdb2593bed55bf03777854",
+		"stbz_balance": "102000000000000000000",
+		"eligible_stbz_balance": "102000000000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "102000000000000000000"
+	},
+	{
+		"user": "0xaDbcd1116BF3FF816AE711AeB679cfC3b3480EbE",
+		"stbz_balance": "104318692551693749070",
+		"eligible_stbz_balance": "104318692551693749070",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "104318692551693749070"
+	},
+	{
+		"user": "0x08431e96A8ded2e9E2DEb0DE6b01c613EC4F7062",
+		"stbz_balance": "173651498626488269867",
+		"eligible_stbz_balance": "173651498626488269867",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "173651498626488269867"
+	},
+	{
+		"user": "0xe8d1Ce349AEaB0215f6fde74788355BD64E49639",
+		"stbz_balance": "109000000000000000000",
+		"eligible_stbz_balance": "109000000000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "109000000000000000000"
+	},
+	{
+		"user": "0xe70901adf80645B4517346D786A4f88ebbA34731",
+		"stbz_balance": "103000000000000000000",
+		"eligible_stbz_balance": "103000000000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "103000000000000000000"
+	},
+	{
+		"user": "0x7f86Fc973ceFF80E32bF48e6eE33E3b091eA3859",
+		"stbz_balance": "1523710083550623212965",
+		"eligible_stbz_balance": "1523710083550623212965",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "1523710083550623212965"
+	},
+	{
+		"user": "0x03324583Bf49c802dA1B684D3D8E7fCB4A7E0919",
+		"stbz_balance": "100989785465264792957",
+		"eligible_stbz_balance": "100989785465264792957",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "100989785465264792957"
+	},
+	{
+		"user": "0xd8fD7A753f3Be0c5c6d7F5dc459AC0F90dF6913b",
+		"stbz_balance": "144482733829887162914",
+		"eligible_stbz_balance": "144482733829887162914",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "144482733829887162914"
+	},
+	{
+		"user": "0xFAf987fE64C815f64B24449Ce6687D8b2CCc7371",
+		"stbz_balance": "108583855073889765372",
+		"eligible_stbz_balance": "108583855073889765372",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "108583855073889765372"
+	},
+	{
+		"user": "0xC20bA3d0ce47F54EA2F160E87DAE916A58FB903F",
+		"stbz_balance": "100000000000000000000",
+		"eligible_stbz_balance": "100000000000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "100000000000000000000"
+	},
+	{
+		"user": "0x7Cf37d8c61bc4B39b7400392A57E412F44B1389c",
+		"stbz_balance": "150000000000000000000",
+		"eligible_stbz_balance": "150000000000000000000",
+		"stol_balance": "0",
+		"boosted": "false",
+		"bonus": "0",
+		"claimable_stbb": "150000000000000000000"
+	}
+]
