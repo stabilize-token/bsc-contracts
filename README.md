@@ -6,6 +6,8 @@ STBB Token: https://bscscan.com/address/0xE1316066af35fbfF54f870eA6d1468255602a6
 
 Developer Treasury: https://bscscan.com/address/0xBadf379be89b77D059aB02d871FC2372BeF65Fa6
 
+Emissions Operator: https://bscscan.com/address/0x9F37068a58DE8a2adfaECA4Eb01794E23868365F
+
 ### Strategy Contracts
 zsb-USD: https://bscscan.com/address/0x62b39BEB9e784e957CD112706919a9F6bACE0Cc5
 
