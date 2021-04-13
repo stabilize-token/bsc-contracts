@@ -541,6 +541,7 @@ pragma solidity =0.6.6;
 interface StabilizeStakingPool {
     function notifyRewardAmount(uint256) external;
     function getTotalSTBB() external view returns (uint256);
+    function getCurrentStrategy() external view returns (address);
 }
 
 interface PancakeRouter {
@@ -571,6 +572,7 @@ interface CurveLikeExchange{
 interface SmoothyExchange{
     function getSwapAmount(uint256 bTokenIdxIn, uint256 bTokenIdxOut, uint256 bTokenInAmount) external view returns (uint256 bTokenOutAmount);
     function swap(uint256 bTokenIdxIn, uint256 bTokenIdxOut, uint256 bTokenInAmount, uint256 bTokenOutMin) external;
+    function getBalance(uint256 tid) external view returns (uint256);
 }
 
 interface CreamLender{
@@ -954,6 +956,12 @@ contract StandardStrategyArbV2 is Ownable {
                 }else if(_exchangeNum == 6){
                     // Smoothy exchange - low - zero slippage on certain trade sizes
                     SmoothyExchange router = SmoothyExchange(SMOOTHY_EXCHANGE);
+                    uint256 maxAmountOut = router.getBalance(tokenList[_idOut].smoothyID);
+                    // Convert to idIn decimals
+                    maxAmountOut = maxAmountOut.mul(10**tokenList[_idIn].decimals).div(10**tokenList[_idOut].decimals);
+                    if(maxAmountOut < _amount){
+                        return 0; // Do not see swap as it will revert
+                    }
                     return router.getSwapAmount(tokenList[_idIn].smoothyID, tokenList[_idOut].smoothyID, _amount);
                 }
             }            
@@ -1048,6 +1056,12 @@ contract StandardStrategyArbV2 is Ownable {
                 }else if(_exchangeNum == 6){
                     // We use Smoothy which uses a form of Curve
                     SmoothyExchange router = SmoothyExchange(SMOOTHY_EXCHANGE);
+                    uint256 maxAmountOut = router.getBalance(tokenList[_idOut].smoothyID);
+                    // Convert to idIn decimals
+                    maxAmountOut = maxAmountOut.mul(10**tokenList[_idIn].decimals).div(10**tokenList[_idOut].decimals);
+                    if(maxAmountOut < _amount){
+                        return; // Do not see swap as it will revert
+                    }
                     tokenList[_idIn].token.safeApprove(SMOOTHY_EXCHANGE, 0);
                     tokenList[_idIn].token.safeApprove(SMOOTHY_EXCHANGE, _amount);
                     router.swap(tokenList[_idIn].smoothyID, tokenList[_idOut].smoothyID, _amount, 1);
@@ -1311,6 +1325,10 @@ contract StandardStrategyArbV2 is Ownable {
                             // There are no tokens at the staking pool
                             sendToStaking = false;
                         }
+                        if(StabilizeStakingPool(zsbTokenAddress).getCurrentStrategy() != address(this)){
+                            // This strategy cannot send tokens to the token vault
+                            sendToStaking = false;
+                        }
                     }
                     if(sendToStaking == true){
                         bnb.safeTransfer(zsbTokenAddress, stakersAmount);
@@ -1461,7 +1479,7 @@ contract StandardStrategyArbV2 is Ownable {
     
     // Reusable timelock variables
     address private _timelock_address;
-    uint256[3] private _timelock_data;
+    uint256[4] private _timelock_data;
     
     modifier timelockConditionsMet(uint256 _type) {
         require(_timelockType == _type, "Timelock not acquired for this function");
@@ -1514,20 +1532,22 @@ contract StandardStrategyArbV2 is Ownable {
     // Change the strategy allocations between the parties
     // --------------------
     
-    function startChangeStrategyAllocations(uint256 _pDepositors, uint256 _pStakers, uint256 _pExecutor) external onlyGovernance {
+    function startChangeStrategyAllocations(uint256 _pDepositors, uint256 _pFDepositors, uint256 _pStakers, uint256 _pExecutor) external onlyGovernance {
         // Changes strategy allocations in one call
-        require(_pDepositors <= 100000 && _pExecutor <= 100000 && _pStakers <= 100000,"Percent cannot be greater than 100%");
+        require(_pDepositors <= 100000 && _pExecutor <= 100000 && _pStakers <= 100000 && _pFDepositors <= 100000,"Percent cannot be greater than 100%");
         _timelockStart = now;
         _timelockType = 4;
         _timelock_data[0] = _pDepositors;
         _timelock_data[1] = _pExecutor;
         _timelock_data[2] = _pStakers;
+        _timelock_data[3] = _pFDepositors;
     }
     
     function finishChangeStrategyAllocations() external onlyGovernance timelockConditionsMet(4) {
         percentDepositor = _timelock_data[0];
         percentExecutor = _timelock_data[1];
         percentStakers = _timelock_data[2];
+        percentFlashDepositor = _timelock_data[3];
     }
     // --------------------
     
