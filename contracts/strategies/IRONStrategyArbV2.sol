@@ -534,7 +534,7 @@ contract Ownable is Context {
     }
 }
 
-// File: contracts/strategies/StandardStrategyArbV2.sol
+// File: contracts/strategies/IRONStrategyArbV2.sol
 
 pragma solidity =0.6.6;
 
@@ -544,17 +544,17 @@ interface StabilizeStakingPool {
     function getCurrentStrategy() external view returns (address);
 }
 
-interface PancakeRouter {
-    function swapExactETHForTokens(uint, address[] calldata, address, uint) external payable returns (uint[] memory);
+interface TradeRouter {
+    function swapExactETHForTokens(uint, address[] calldata, address, uint) external payable returns (uint[] memory); // Pancake
     function swapExactTokensForTokens(uint, uint, address[] calldata, address, uint) external returns (uint[] memory);
     function getAmountsOut(uint, address[] calldata) external view returns (uint[] memory); // For a value in, it calculates value out
 }
 
-interface DodoExchange {
-    function querySellBaseToken(uint256) external view returns (uint256);
-    function queryBuyBaseToken(uint256) external view returns (uint256);
-    function sellBaseToken(uint256, uint256, bytes calldata) external returns (uint256);
-    function buyBaseToken(uint256, uint256, bytes calldata) external returns (uint256);
+interface ValueLikeRouter {
+    function swapExactETHForTokens(address, uint, address[] calldata, address, uint) external payable returns (uint[] memory); // Pancake
+    function swapExactTokensForTokens(address, address, uint, uint, address[] calldata, address, uint) external returns (uint[] memory);
+    function formula() external view returns (address); // Router has separate address for calculations
+    function getAmountsOut(address, address, uint, address[] calldata) external view returns (uint[] memory); // For a value in, it calculates value out
 }
 
 interface ValueLikeExchange{
@@ -562,174 +562,90 @@ interface ValueLikeExchange{
     function swap(uint8 tokenIndexFrom, uint8 tokenIndexTo, uint256 dx, uint256 minDy, uint256 deadline) external returns (uint256);
 }
 
-interface CurveLikeExchange{
-    function get_dy_underlying(int128, int128, uint256) external view returns (uint256);
-    function get_dy(int128, int128, uint256) external view returns (uint256);
-    function exchange_underlying(int128, int128, uint256, uint256) external; // Exchange tokens
-    function exchange(int128, int128, uint256, uint256) external; // Exchange tokens
+interface IronFlashModule{
+    function checkFlashTrade() external view returns (uint256);
+    function doFlashTrade() external;
 }
 
-interface SmoothyExchange{
-    function getSwapAmount(uint256 bTokenIdxIn, uint256 bTokenIdxOut, uint256 bTokenInAmount) external view returns (uint256 bTokenOutAmount);
-    function swap(uint256 bTokenIdxIn, uint256 bTokenIdxOut, uint256 bTokenInAmount, uint256 bTokenOutMin) external;
-    function getBalance(uint256 tid) external view returns (uint256);
-}
+// This will arb across multiple tokens
 
-interface CreamLender{
-    function getCash() external view returns (uint256); // Get liquidity of token to borrow
-    function flashLoan(address receiver, uint amount, bytes calldata params) external;
-}
-
-// This will arb across multiple markets to find the best exchange and pair to trade. Designed to minimize gas costs for executors
-// This strat will reintroduce classic arbs using flash loans from Cream (0.03% fee) using Smoothy (0.04% fee) based on price spread
-
-contract StandardStrategyArbV2 is Ownable {
+contract IRONStrategyArbV2 is Ownable {
     using SafeMath for uint256;
     using SafeERC20 for IERC20;
     using Address for address;
     
     address public treasuryAddress; // Address of the treasury
     address public zsbTokenAddress; // The address of the controlling zsb-Token
+    address public flashModuleAddress; // Proprietary flash loan module
 
     uint256 constant DIVISION_FACTOR = 100000;
-    uint256 public gasPrice = 10e9; // Gas price in wei, changes sometimes on BSC
-
+    
+    uint256 public gasPrice = 10e9; // Gas price in wei, constant on BSC
     uint256 public lastTradeTime;
     uint256 public lastActionBalance; // Balance before last deposit, withdraw or trade
     uint256 public percentTradeTrigger = 10000; // 10% change in value will trigger a trade
     uint256 public maxPercentSell = 100000; // 100% of the tokens are sold to the cheapest token
     uint256 public maxAmountSell = 400000; // The maximum amount of tokens that can be sold at once
     uint256 public percentDepositor = 50000; // 1000 = 1%, depositors earn 50% of all gains
-    uint256 public percentFlashDepositor = 10000; // Depositors earn 10% from flash loan gains
     uint256 public percentExecutor = 10000; // 10000 = 10% of WBNB goes to executor on top of gas stipend
     uint256 public percentStakers = 50000; // 50000 = 50% of WBNB goes to strat stakers
     uint256 public maxPercentStipend = 50000; // The maximum amount of WBNB profit that can be allocated to the executor for gas in percent
     uint256 public gasStipend = 1000000; // This is the gas units that are covered by executing a trade taken from the WBNB profit    
-    uint256 public minAmountProfit = 1e18; // Amount (normalized) profit needed to share profit with executors/treasury/stakers
+    uint256 public minAmountProfit = 1e18; // Total profit must be greater than 1 token for executor to earn from trade
     uint256 public minTradeSplit = 20000; // Minimum amount required before selling a percent of tokens
-    uint256[6] private flashParams; // Global parameters guiding the flash loan setup
 
     // Token information
-    // This strategy accepts multiple stablecoins
-    // BUSD, DAI, USDC, USDT
-    // All tokens are converted to BUSD when converted to WBNB
+    // IRON, VDOLLAR
     struct TokenInfo {
         IERC20 token; // Reference of token
         uint256 decimals; // Decimals of token
-        address pancakePool; // Liquidity pool on Pancakeswap
-        address creamPool; // Cream representative pool
-        uint256 pancakeIndex;
-        uint8 nerveID; // IDs for the different curve type exchanges
-        int128 beltID;
-        int128 acryptoID;
         uint8 valueID;
-        int128 ellipsisID;
-        uint256 smoothyID;
     }
     
     TokenInfo[] private tokenList; // An array of tokens accepted as deposits
     
     // Strategy specific variables
-    // These curve pools are unique because they hold eth directly
     address constant WBNB_ADDRESS = address(0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c); // WBNB address
-    address constant PANCAKE_ROUTER = address(0x05fF2B0DB69458A0750badebc4f9e13aDd608C7F); // Used to sell stablecoins for WBNB
-    uint256 constant TEST_QUOTE = 10000;
-    uint256 constant CREAM_FEE = 31; // Represents a 0.031% fee, we borrow up to max amount sell at a time
-    uint256 constant WBNB_TOKEN_ID = 4;
+    address constant BUSD_ADDRESS = address(0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56); // BUSD
+    uint256 constant WBNB_TOKEN_ID = 2;
     
-    // Exchanges
-    address constant DODO_EXCHANGE = address(0xBe60d4c4250438344bEC816Ec2deC99925dEb4c7);
-    address constant NERVE_EXCHANGE = address(0x1B3771a66ee31180906972580adE9b81AFc5fCDc);
-    address constant BELT_EXCHANGE = address(0xF16D312d119c13dD27fD0dC814b0bCdcaAa62dfD);
-    address constant ACRYPTOS_EXCHANGE = address(0xb3F0C9ea1F05e312093Fdb031E789A756659B0AC);
-    address constant VALUEDEFI_EXCHANGE = address(0x7569f9adabC99780B7A91B16666Bb985177D1DCa);
-    address constant ELLIPSIS_EXCHANGE = address(0x160CAed03795365F3A589f10C379FfA7d75d4E76);
-    address constant SMOOTHY_EXCHANGE = address(0xe5859f4EFc09027A9B718781DCb2C6910CAc6E91);
-    
-    // Exchange information
-    uint256 constant EXCHANGE_COUNT = 7;
-    
+    address constant PANCAKE_ROUTER = address(0x05fF2B0DB69458A0750badebc4f9e13aDd608C7F);
+    address constant VALUEDEFI_ROUTER = address(0xb7e19a1188776f32E8C2B790D9ca578F2896Da7C); // Router
+    address constant VALUEDEFI_IRON_POOL = address(0x45810Aef9BFB81B3bFa890e931991a510a4c31d3); // POOL for Vdollar, Iron
+    address constant IRON_BUSD_LP = address(0x09D6afB74E3a40b24425EE215fA367be971b4aF3); // ValueDefi LP token
+    address constant BUSD_WBNB_LP = address(0x522361C3aa0d81D1726Fa7d40aA14505d0e097C9);
+
     constructor(
         address _treasury,
-        address _zsbToken
+        address _zsbToken,
+        address _flashModule
     ) public {
         treasuryAddress = _treasury;
         zsbTokenAddress = _zsbToken;
+        flashModuleAddress = _flashModule;
         setupWithdrawTokens();
     }
 
     // Initialization functions
     
     function setupWithdrawTokens() internal {
-        // Start with BUSD
-        IERC20 _token = IERC20(address(0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56));
+        // Start with IRON
+        IERC20 _token = IERC20(address(0x7b65B489fE53fCE1F6548Db886C08aD73111DDd8));
         tokenList.push(
             TokenInfo({
                 token: _token,
                 decimals: _token.decimals(),
-                pancakePool: address(0x1B96B92314C44b159149f7E0303511fB2Fc4774f),
-                creamPool: address(0x2Bc4eb013DDee29D37920938B96d353171289B7C),
-                pancakeIndex: 1,
-                nerveID: 0,
-                beltID: 3,
-                acryptoID: 0,
-                valueID: 3,
-                ellipsisID: 0,
-                smoothyID: 0
-            })
-        );   
-        
-        // DAI
-        _token = IERC20(address(0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3));
-        tokenList.push(
-            TokenInfo({
-                token: _token,
-                decimals: _token.decimals(),
-                pancakePool: address(0x3aB77e40340AB084c3e23Be8e5A6f7afed9D41DC),
-                creamPool: address(0x9095e8d707E40982aFFce41C61c10895157A1B22),
-                pancakeIndex: 0,
-                nerveID: 0,
-                beltID: 0,
-                acryptoID: 2,
-                valueID: 0,
-                ellipsisID: 0, // DAI not on Ellipsis
-                smoothyID: 3
+                valueID: 0
             })
         );
         
-        // USDC
-        _token = IERC20(address(0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d));
+        // VDOLLAR
+        _token = IERC20(address(0x6334D757FDa9326fa1fAe7f9762485B722403ceE));
         tokenList.push(
             TokenInfo({
                 token: _token,
                 decimals: _token.decimals(),
-                pancakePool: address(0x680Dd100E4b394Bda26A59dD5c119A391e747d18),
-                creamPool: address(0xD83C88DB3A6cA4a32FFf1603b0f7DDce01F5f727),
-                pancakeIndex: 0,
-                nerveID: 2,
-                beltID: 1,
-                acryptoID: 3,
-                valueID: 1,
-                ellipsisID: 1,
-                smoothyID: 2
-            })
-        );
-        
-        // USDT
-        _token = IERC20(address(0x55d398326f99059fF775485246999027B3197955));
-        tokenList.push(
-            TokenInfo({
-                token: _token,
-                decimals: _token.decimals(),
-                pancakePool: address(0xc15fa3E22c912A276550F3E5FE3b0Deb87B55aCd),
-                creamPool: address(0xEF6d459FE81C3Ed53d292c936b2df5a8084975De),
-                pancakeIndex: 0,
-                nerveID: 1,
-                beltID: 2,
-                acryptoID: 1,
-                valueID: 2,
-                ellipsisID: 2,
-                smoothyID: 1
+                valueID: 1
             })
         );
     }
@@ -778,21 +694,11 @@ contract StandardStrategyArbV2 is Ownable {
     }
     
     function withdrawTokenReservesID() internal view returns (uint256, uint256) {
-        // This function will return the address and amount of the token with the highest balance
-        uint256 length = tokenList.length;
-        uint256 targetID = 0;
-        uint256 targetNormBalance = 0;
-        for(uint256 i = 0; i < length; i++){
-            uint256 _normBal = tokenList[i].token.balanceOf(address(this)).mul(1e18).div(10**tokenList[i].decimals);
-            if(_normBal > 0){
-                if(targetNormBalance == 0 || _normBal >= targetNormBalance){
-                    targetNormBalance = _normBal;
-                    targetID = i;
-                }
-            }
-        }
-        if(targetNormBalance > 0){
-            return (targetID, tokenList[targetID].token.balanceOf(address(this)));
+        // This function will return the address and amount of main, then collateral
+        if(tokenList[0].token.balanceOf(address(this)) > 0){
+            return (0, tokenList[0].token.balanceOf(address(this)));
+        }else if(tokenList[1].token.balanceOf(address(this)) > 0){
+            return (1, tokenList[1].token.balanceOf(address(this)));
         }else{
             return (0, 0); // No balance
         }        
@@ -820,10 +726,9 @@ contract StandardStrategyArbV2 is Ownable {
     function withdraw(address _depositor, uint256 _share, uint256 _total, bool nonContract) public onlyZSBToken returns (uint256) {
         require(balance() > 0, "There are no tokens in this strategy");
         if(nonContract == true){
-            if(_share > _total.mul(percentTradeTrigger).div(DIVISION_FACTOR)){
-                (uint256 _tokenID, ) = withdrawTokenReservesID(); // Get the most plentiful token
-                (uint256 sellExchangeNum, uint256 targetID) = getExchanges(_tokenID);
-                checkAndSwapToken(address(0), _tokenID, targetID, sellExchangeNum, false);
+            if( _share > _total.mul(percentTradeTrigger).div(DIVISION_FACTOR)){
+                uint256 buyID = getCheapestToken();
+                checkAndSwapToken(address(0), buyID, false);
             }
         }
         
@@ -831,11 +736,11 @@ contract StandardStrategyArbV2 is Ownable {
         uint256 _balance = balance();
         if(_share < _total){
             uint256 _myBalance = _balance.mul(_share).div(_total);
-            withdrawPerBalance(_depositor, _myBalance, false); // This will withdraw based on token balance
+            withdrawPerOrder(_depositor, _myBalance, false); // This will withdraw based on token price
             withdrawAmount = _myBalance;
         }else{
             // We are all shares, transfer all
-            withdrawPerBalance(_depositor, _balance, true);
+            withdrawPerOrder(_depositor, _balance, true);
             withdrawAmount = _balance;
         }       
         lastActionBalance = balance();
@@ -843,8 +748,8 @@ contract StandardStrategyArbV2 is Ownable {
         return withdrawAmount;
     }
     
-    // This will withdraw the tokens from the contract based on their balance, from highest balance to lowest
-    function withdrawPerBalance(address _receiver, uint256 _withdrawAmount, bool _takeAll) internal {
+    // This will withdraw the tokens from the contract based on their order
+    function withdrawPerOrder(address _receiver, uint256 _withdrawAmount, bool _takeAll) internal {
         uint256 length = tokenList.length;
         if(_takeAll == true){
             // Send the entire balance
@@ -856,336 +761,126 @@ contract StandardStrategyArbV2 is Ownable {
             }
             return;
         }
-        bool[] memory done = new bool[](length);
-        uint256 targetID = 0;
-        uint256 targetNormBalance = 0;
+        
         for(uint256 i = 0; i < length; i++){
-            
-            targetNormBalance = 0; // Reset the target balance
-            // Find the highest balanced token to withdraw
-            for(uint256 i2 = 0; i2 < length; i2++){
-                if(done[i2] == false){
-                    uint256 _normBal = tokenList[i2].token.balanceOf(address(this)).mul(1e18).div(10**tokenList[i2].decimals);
-                    if(targetNormBalance == 0 || _normBal >= targetNormBalance){
-                        targetNormBalance = _normBal;
-                        targetID = i2;
-                    }
-                }
-            }
-            done[targetID] = true;
-            
             // Determine the balance left
-            uint256 _normalizedBalance = tokenList[targetID].token.balanceOf(address(this)).mul(1e18).div(10**tokenList[targetID].decimals);
+            uint256 _normalizedBalance = tokenList[i].token.balanceOf(address(this)).mul(1e18).div(10**tokenList[i].decimals);
             if(_normalizedBalance <= _withdrawAmount){
                 // Withdraw the entire balance of this token
                 if(_normalizedBalance > 0){
                     _withdrawAmount = _withdrawAmount.sub(_normalizedBalance);
-                    tokenList[targetID].token.safeTransfer(_receiver, tokenList[targetID].token.balanceOf(address(this)));                    
+                    tokenList[i].token.safeTransfer(_receiver, tokenList[i].token.balanceOf(address(this)));                    
                 }
             }else{
                 // Withdraw a partial amount of this token
                 if(_withdrawAmount > 0){
                     // Convert the withdraw amount to the token's decimal amount
-                    uint256 _balance = _withdrawAmount.mul(10**tokenList[targetID].decimals).div(1e18);
+                    uint256 _balance = _withdrawAmount.mul(10**tokenList[i].decimals).div(1e18);
                     _withdrawAmount = 0;
-                    tokenList[targetID].token.safeTransfer(_receiver, _balance);
+                    tokenList[i].token.safeTransfer(_receiver, _balance);
                 }
                 break; // Nothing more to withdraw
             }
         }
     }
     
-    function simulateExchange(uint256 _idIn, uint256 _idOut, uint256 _amount, uint256 _exchangeNum, bool classicArb, uint256 _buyExchangeNum) internal view returns (uint256) {
-        if(classicArb == false){
-            if(_idOut == WBNB_TOKEN_ID){
-                // We are trying to get WBNB
-                PancakeRouter router = PancakeRouter(PANCAKE_ROUTER);
-                address[] memory path;
-                if(_idIn == 0){
-                    // Already BUSD
-                    path = new address[](2);
-                    path[0] = address(tokenList[_idIn].token);
-                    path[1] = WBNB_ADDRESS;
-                }else{
-                    path = new address[](3);
-                    path[0] = address(tokenList[_idIn].token);
-                    path[1] = address(tokenList[0].token);
-                    path[2] = WBNB_ADDRESS;                
-                }
-                uint256[] memory estimates = router.getAmountsOut(_amount, path);
-                _amount = estimates[estimates.length - 1]; // This is the amount of WETH returned
-                return _amount;
-            }else{
-                // Our route can take place on 6 exchanges
-                if(_exchangeNum == 0){
-                    // Dodex exchange only has BUSD and USDT
-                    // Basetoken is BUSD
-                    if((_idIn != 0 && _idIn != 3) || (_idOut != 0 && _idOut != 3)){return 0;} // Can't trade
-                    DodoExchange router = DodoExchange(DODO_EXCHANGE);
-                    if(_idIn == 0){
-                        // Selling BUSD for USDT, straightforward
-                        return router.querySellBaseToken(_amount);
-                    }else{
-                        // Selling USDT for BUSD, use the inverse price
-                        _amount = _amount.mul(10**tokenList[_idOut].decimals).div(10**tokenList[_idIn].decimals);
-                        return _amount.mul(_amount).div(router.queryBuyBaseToken(_amount));
-                    }
-                }else if(_exchangeNum == 1){
-                    // We use Nerve.fi which uses a form of Curve
-                    // Nerve doesn't support DAI
-                    if(_idIn == 1 || _idOut == 1){return 0;}
-                    ValueLikeExchange router = ValueLikeExchange(NERVE_EXCHANGE);
-                    return router.calculateSwap(tokenList[_idIn].nerveID, tokenList[_idOut].nerveID, _amount);
-                }else if(_exchangeNum == 2){
-                    // We use Belt.fi which uses a form of Curve
-                    CurveLikeExchange router = CurveLikeExchange(BELT_EXCHANGE);
-                    return router.get_dy_underlying(tokenList[_idIn].beltID, tokenList[_idOut].beltID, _amount);
-                }else if(_exchangeNum == 3){
-                    // We use Acryptos which uses a form of Curve
-                    CurveLikeExchange router = CurveLikeExchange(ACRYPTOS_EXCHANGE);
-                    return router.get_dy(tokenList[_idIn].acryptoID, tokenList[_idOut].acryptoID, _amount);
-                }else if(_exchangeNum == 4){
-                    // We use ValueDefi which uses a form of Curve
-                    ValueLikeExchange router = ValueLikeExchange(VALUEDEFI_EXCHANGE);
-                    return router.calculateSwap(tokenList[_idIn].valueID, tokenList[_idOut].valueID, _amount);
-                }else if(_exchangeNum == 5){
-                    // This is for Ellipsis
-                    if(_idIn == 1 || _idOut == 1){return 0;} // Ellipsis doesn't support DAI
-                    CurveLikeExchange router = CurveLikeExchange(ELLIPSIS_EXCHANGE);
-                    return router.get_dy(tokenList[_idIn].ellipsisID, tokenList[_idOut].ellipsisID, _amount);
-                }else if(_exchangeNum == 6){
-                    // Smoothy exchange - low - zero slippage on certain trade sizes
-                    SmoothyExchange router = SmoothyExchange(SMOOTHY_EXCHANGE);
-                    uint256 maxAmountOut = router.getBalance(tokenList[_idOut].smoothyID);
-                    // Convert to idIn decimals
-                    maxAmountOut = maxAmountOut.mul(10**tokenList[_idIn].decimals).div(10**tokenList[_idOut].decimals);
-                    if(maxAmountOut < _amount){
-                        return 0; // Do not see swap as it will revert
-                    }
-                    return router.getSwapAmount(tokenList[_idIn].smoothyID, tokenList[_idOut].smoothyID, _amount);
-                }
-            }            
+    function simulateExchange(uint256 _idIn, uint256 _idOut, uint256 _amount) internal view returns (uint256) {
+        if(_idOut == WBNB_TOKEN_ID){
+            // VDOLLAR Route: VDOLLAR => IRON => BUSD => BNB
+            // IRON ROUTE: IRON => BUSD => BNB
+            if(_idIn == 1){
+                ValueLikeExchange router = ValueLikeExchange(VALUEDEFI_IRON_POOL);
+                _amount = router.calculateSwap(tokenList[1].valueID, tokenList[0].valueID, _amount); // Get IRON
+            }
+            
+            // Use ValueSwap to get BUSD from IRON
+            ValueLikeRouter vRouter = ValueLikeRouter(ValueLikeRouter(VALUEDEFI_ROUTER).formula());
+            address[] memory path;
+            uint256[] memory estimates;
+            path = new address[](1);
+            path[0] = IRON_BUSD_LP;
+            estimates = vRouter.getAmountsOut(address(tokenList[0].token), BUSD_ADDRESS, _amount, path);
+            _amount = estimates[estimates.length - 1]; // BUSD amount
+            
+            // Now use pancake to get BUSD to BNB
+            TradeRouter cake = TradeRouter(PANCAKE_ROUTER);
+            path = new address[](2);
+            path[0] = BUSD_ADDRESS;
+            path[1] = WBNB_ADDRESS;
+            estimates = cake.getAmountsOut(_amount, path);
+            _amount = estimates[estimates.length - 1]; // This is the amount of WBNB
+            return _amount;            
         }else{
-            // The user wants to trade back to the original token on another exchange
-            _amount = simulateExchange(_idIn, _idOut, _amount, _exchangeNum, false, 0); // Sell the token for the target token
-            _amount = simulateExchange(_idOut, _idIn, _amount, _buyExchangeNum, false, 0); // Sell the target token back to original token
-            return _amount;
+            // Swap between IRON and Vdollar
+            ValueLikeExchange router = ValueLikeExchange(VALUEDEFI_IRON_POOL);
+            return router.calculateSwap(tokenList[_idIn].valueID, tokenList[_idOut].valueID, _amount);
         }
     }
     
-    function exchange(uint256 _idIn, uint256 _idOut, uint256 _amount, uint256 _exchangeNum, bool classicArb, uint256 _buyExchangeNum) internal {
-        if(classicArb == false){
-            if(_idOut == WBNB_TOKEN_ID){
-                // We are trying to get WBNB
-                PancakeRouter router = PancakeRouter(PANCAKE_ROUTER);
-                address[] memory path;
-                if(_idIn == 0){
-                    // Already BUSD
-                    path = new address[](2);
-                    path[0] = address(tokenList[_idIn].token);
-                    path[1] = WBNB_ADDRESS;
-                }else{
-                    path = new address[](3);
-                    path[0] = address(tokenList[_idIn].token);
-                    path[1] = address(tokenList[0].token);
-                    path[2] = WBNB_ADDRESS;                
-                }
-                tokenList[_idIn].token.safeApprove(PANCAKE_ROUTER, 0);
-                tokenList[_idIn].token.safeApprove(PANCAKE_ROUTER, _amount);
-                router.swapExactTokensForTokens(_amount, 1, path, address(this), now.add(60)); // Get WBNB from token
-                return; 
-            }else{
-                // Our route can take place on 6 exchanges
-                if(_exchangeNum == 0){
-                    // Dodex exchange only has BUSD and USDT
-                    // Basetoken is BUSD
-                    if((_idIn != 0 && _idIn != 3) || (_idOut != 0 && _idOut != 3)){return;} // Can't trade
-                    DodoExchange router = DodoExchange(DODO_EXCHANGE);
-                    tokenList[_idIn].token.safeApprove(DODO_EXCHANGE, 0);
-                    tokenList[_idIn].token.safeApprove(DODO_EXCHANGE, _amount);
-                    bytes memory nulldata;
-                    if(_idIn == 0){
-                        // Selling BUSD for USDT, straightforward
-                        router.sellBaseToken(_amount, 1, nulldata);
-                    }else{
-                        // Selling USDT for BUSD, use the inverse price
-                        // Reduce the buy amount slightly to allow it to sell
-                        uint256 buyAmount = _amount.mul(10**tokenList[_idOut].decimals).div(10**tokenList[_idIn].decimals); // Convert to same decimals
-                        buyAmount = buyAmount.mul(_amount).div(router.queryBuyBaseToken(buyAmount)).mul(99900).div(DIVISION_FACTOR);
-                        router.buyBaseToken(buyAmount, _amount, nulldata);
-                    }
-                    return;
-                }else if(_exchangeNum == 1){
-                    // We use Nerve.fi which uses a form of Curve
-                    // Nerve doesn't support DAI
-                    if(_idIn == 1 || _idOut == 1){return;}
-                    ValueLikeExchange router = ValueLikeExchange(NERVE_EXCHANGE);
-                    tokenList[_idIn].token.safeApprove(NERVE_EXCHANGE, 0);
-                    tokenList[_idIn].token.safeApprove(NERVE_EXCHANGE, _amount);
-                    router.swap(tokenList[_idIn].nerveID, tokenList[_idOut].nerveID, _amount, 1, now.add(60));
-                    return;
-                }else if(_exchangeNum == 2){
-                    // We use Belt.fi which uses a form of Curve
-                    CurveLikeExchange router = CurveLikeExchange(BELT_EXCHANGE);
-                    tokenList[_idIn].token.safeApprove(BELT_EXCHANGE, 0);
-                    tokenList[_idIn].token.safeApprove(BELT_EXCHANGE, _amount);
-                    router.exchange_underlying(tokenList[_idIn].beltID, tokenList[_idOut].beltID, _amount, 1);
-                    return;
-                }else if(_exchangeNum == 3){
-                    // We use Acryptos which uses a form of Curve
-                    CurveLikeExchange router = CurveLikeExchange(ACRYPTOS_EXCHANGE);
-                    tokenList[_idIn].token.safeApprove(ACRYPTOS_EXCHANGE, 0);
-                    tokenList[_idIn].token.safeApprove(ACRYPTOS_EXCHANGE, _amount);
-                    router.exchange(tokenList[_idIn].acryptoID, tokenList[_idOut].acryptoID, _amount, 1);
-                    return;
-                }else if(_exchangeNum == 4){
-                    // We use ValueDefi which uses a form of Curve
-                    ValueLikeExchange router = ValueLikeExchange(VALUEDEFI_EXCHANGE);
-                    tokenList[_idIn].token.safeApprove(VALUEDEFI_EXCHANGE, 0);
-                    tokenList[_idIn].token.safeApprove(VALUEDEFI_EXCHANGE, _amount);
-                    router.swap(tokenList[_idIn].valueID, tokenList[_idOut].valueID, _amount, 1, now.add(60));
-                    return;
-                }else if(_exchangeNum == 5){
-                    // This is for Ellipsis
-                    if(_idIn == 1 || _idOut == 1){return;} // Ellipsis doesn't support DAI
-                    CurveLikeExchange router = CurveLikeExchange(ELLIPSIS_EXCHANGE);
-                    tokenList[_idIn].token.safeApprove(ELLIPSIS_EXCHANGE, 0);
-                    tokenList[_idIn].token.safeApprove(ELLIPSIS_EXCHANGE, _amount);
-                    router.exchange(tokenList[_idIn].ellipsisID, tokenList[_idOut].ellipsisID, _amount, 1);
-                    return;
-                }else if(_exchangeNum == 6){
-                    // We use Smoothy which uses a form of Curve
-                    SmoothyExchange router = SmoothyExchange(SMOOTHY_EXCHANGE);
-                    uint256 maxAmountOut = router.getBalance(tokenList[_idOut].smoothyID);
-                    // Convert to idIn decimals
-                    maxAmountOut = maxAmountOut.mul(10**tokenList[_idIn].decimals).div(10**tokenList[_idOut].decimals);
-                    if(maxAmountOut < _amount){
-                        return; // Do not see swap as it will revert
-                    }
-                    tokenList[_idIn].token.safeApprove(SMOOTHY_EXCHANGE, 0);
-                    tokenList[_idIn].token.safeApprove(SMOOTHY_EXCHANGE, _amount);
-                    router.swap(tokenList[_idIn].smoothyID, tokenList[_idOut].smoothyID, _amount, 1);
-                    return;
-                }
-            }            
+    function exchange(uint256 _idIn, uint256 _idOut, uint256 _amount) internal {
+        if(_idOut == WBNB_TOKEN_ID){
+            uint256 _bal;
+            // VDOLLAR Route: VDOLLAR => IRON => BUSD => BNB
+            // IRON ROUTE: IRON => BUSD => BNB
+            if(_idIn == 1){
+                // First convert from VDOLLAR to IRON
+                ValueLikeExchange router = ValueLikeExchange(VALUEDEFI_IRON_POOL);
+                tokenList[1].token.safeApprove(VALUEDEFI_IRON_POOL, 0);
+                tokenList[1].token.safeApprove(VALUEDEFI_IRON_POOL, _amount);
+                _bal = tokenList[0].token.balanceOf(address(this));
+                router.swap(tokenList[1].valueID, tokenList[0].valueID, _amount, 1, now.add(60));
+                _amount = tokenList[0].token.balanceOf(address(this)).sub(_bal); // Get IRON gain
+            }
+            
+            // Use ValueSwap to get BUSD from IRON
+            ValueLikeRouter vRouter = ValueLikeRouter(VALUEDEFI_ROUTER);
+            address[] memory path;
+            path = new address[](1);
+            path[0] = IRON_BUSD_LP;
+            tokenList[0].token.safeApprove(VALUEDEFI_ROUTER, 0);
+            tokenList[0].token.safeApprove(VALUEDEFI_ROUTER, _amount);
+            _bal = IERC20(BUSD_ADDRESS).balanceOf(address(this));
+            vRouter.swapExactTokensForTokens(address(tokenList[0].token), BUSD_ADDRESS, _amount, 1, path, address(this), now.add(60));
+            _amount = IERC20(BUSD_ADDRESS).balanceOf(address(this)).sub(_bal); // Get BUSD gain
+            
+            // Now use pancake to get BUSD to BNB
+            TradeRouter cake = TradeRouter(PANCAKE_ROUTER);
+            path = new address[](2);
+            path[0] = BUSD_ADDRESS;
+            path[1] = WBNB_ADDRESS;
+            IERC20(BUSD_ADDRESS).safeApprove(PANCAKE_ROUTER, 0);
+            IERC20(BUSD_ADDRESS).safeApprove(PANCAKE_ROUTER, _amount);
+            cake.swapExactTokensForTokens(_amount, 1, path, address(this), now.add(60));
+            return;
         }else{
-            // The user wants to trade back to the original token on another exchange
-            uint256 _bal = tokenList[_idOut].token.balanceOf(address(this));
-            exchange(_idIn, _idOut, _amount, _exchangeNum, false, 0); // Sell the token for the target token
-            _amount = tokenList[_idOut].token.balanceOf(address(this)).sub(_bal);
-            exchange(_idOut, _idIn, _amount, _buyExchangeNum, false, 0); // Sell the target token back to original token
-        }
+            ValueLikeExchange router = ValueLikeExchange(VALUEDEFI_IRON_POOL);
+            tokenList[_idIn].token.safeApprove(VALUEDEFI_IRON_POOL, 0);
+            tokenList[_idIn].token.safeApprove(VALUEDEFI_IRON_POOL, _amount);
+            router.swap(tokenList[_idIn].valueID, tokenList[_idOut].valueID, _amount, 1, now.add(60));
+            return;
+        }        
     }
 
-    function getExchanges(uint256 _tokenID) internal view returns (uint256, uint256) {
-        // Return values are best selling exchange, buying token
-        // Get exchange and token with highest sell amount
-        uint256 targetExchange = 0;
-        uint256 targetToken = 0;
-        uint256 mostTotalAmount = 0;
-        uint256 length = tokenList.length;
-        for(uint256 i = 0; i < length; i++){
-            if(i == _tokenID){continue;}
-            for(uint256 j = 0; j < EXCHANGE_COUNT; j++){
-                uint256 estimate = simulateExchange(_tokenID, i, TEST_QUOTE * (10**tokenList[_tokenID].decimals), j, false, 0);
-                if(estimate > mostTotalAmount){
-                    targetExchange = j;
-                    targetToken = i;
-                    mostTotalAmount = estimate;
-                }
+    function getCheapestToken() internal view returns (uint256) {
+        // This will give us the ID of the cheapest token
+        // The higher the return, the lower the price of the other token
+        uint256 targetID = 0;
+        uint256 mainAmount = uint256(1).mul(10**tokenList[0].decimals);
+        uint256 highAmount = mainAmount;
+        for(uint256 i = 1; i < tokenList.length; i++){
+            // Normalize the estimate into first token decimals
+            uint256 estimate = simulateExchange(0,i,mainAmount);
+            estimate = estimate.mul(10**tokenList[0].decimals).div(10**tokenList[i].decimals);
+            if(estimate > highAmount){
+                // This token is worth less than the main token
+                highAmount = estimate;
+                targetID = i;
             }
         }
-        return (targetExchange, targetToken);
+        return targetID;
     }
     
-    // Start of flash loan functions
-    
-    function getExchangeBestReturn(uint256 _sellID, uint256 _buyID, uint256 _amount) internal view returns (uint256) {
-        // This will return the exchange with the best return between two tokens
-        uint256 targetExchange = 0;
-        uint256 mostTotalAmount = 0;
-        for(uint256 j = 0; j < EXCHANGE_COUNT; j++){
-            uint256 estimate = simulateExchange(_sellID, _buyID, _amount, j, false, 0);
-            if(estimate > mostTotalAmount){
-                targetExchange = j;
-                mostTotalAmount = estimate;
-            }
-        }
-        return targetExchange;
-    }
-    
-    function estimateFlashLoanResult(uint256 _idIn, uint256 _idOut, uint256 _sellExchange, uint256 _buyExchange, uint256 _tradeSize, bool _asWBNB) internal view returns (uint256) {
-        // This will estimate the return of our flash loan minus the fee
-        // First get the liquidity of the borrowed token as we cannot borrow more than available
-        uint256 liq = CreamLender(tokenList[_idIn].creamPool).getCash();
-        if(_tradeSize > liq){
-            _tradeSize = liq;
-        }
-        uint256 fee = _tradeSize.mul(CREAM_FEE).div(DIVISION_FACTOR); // Deduct cream fee
-        uint256 _return = 0;
-        _return = simulateExchange(_idIn, _idOut, _tradeSize, _sellExchange, true, _buyExchange);
-        if(_return > _tradeSize.add(fee)){
-            // Positive return on the flash
-            _return = _return.sub(fee).sub(_tradeSize); // This is return in underlying gain
-            if(_asWBNB == true){
-                _return = _return.mul(DIVISION_FACTOR.sub(percentFlashDepositor)).div(DIVISION_FACTOR);
-                _return = simulateExchange(_idIn, WBNB_TOKEN_ID, _return, 0, false, 0); // Convert return to BNB amount
-            }else{
-                _return = _return.mul(1e18).div(10**tokenList[_idIn].decimals);
-            }
-            return _return;
-        }else{
-            return 0; // Do not take out a flash loan as not enough gain
-        }
-    }
-    
-    function performFlashLoan(uint256 _idIn, uint256 _idOut, uint256 _sellExchange, uint256 _buyExchange, uint256 _tradeSize) internal {
-        // Will call Cream
-        CreamLender lender = CreamLender(tokenList[_idIn].creamPool);
-        uint256 liq = lender.getCash();
-        if(_tradeSize > liq){
-            _tradeSize = liq;
-        }
-        uint256 flashGain = tokenList[_idIn].token.balanceOf(address(this)); // Get base balance amount
-        flashParams[1] = _idIn;
-        flashParams[2] = _idOut;
-        flashParams[3] = _sellExchange;
-        flashParams[4] = _buyExchange;
-        flashParams[0] = 1; // Authorize flash loan receiving
-        bytes memory params = "";
-        lender.flashLoan(address(this), _tradeSize, params);
-        flashParams[0] = 0; // Deactivate flash loan receiving
-        uint256 newBal = tokenList[_idIn].token.balanceOf(address(this));
-        require(newBal > flashGain, "Flash loan failed to increase balance");
-        flashGain = newBal.sub(flashGain);
-        uint256 payout = flashGain.mul(DIVISION_FACTOR.sub(percentFlashDepositor)).div(DIVISION_FACTOR);
-        if(payout > 0){
-            // Convert part to WBNB
-            exchange(_idIn, WBNB_TOKEN_ID, payout, 0, false, 0);
-        }
-    }
-    
-    function executeOperation(address sender, address underlying, uint256 amount, uint256 fee, bytes calldata params) external {
-        require(flashParams[0] == 1, "No flash loan authorized on this contract");
-        require(sender == address(this), "Not Authorized"); // Prevent other contracts from calling this function
-        if(params.length == 0){} // Removes the warning
-        uint256 _idIn = flashParams[1];
-        uint256 _idOut = flashParams[2];
-        uint256 _sellExchange = flashParams[3];
-        uint256 _buyExchange = flashParams[4];
-        require(_msgSender() == tokenList[_idIn].creamPool, "Not called from Cream token");
-        require(underlying == address(tokenList[_idIn].token), "Not valid token");
-        flashParams[0] = 0; // Prevent a replay;
-
-        exchange(_idIn, _idOut, amount, _sellExchange, true, _buyExchange);
-
-        // transfer fund + fee back to cToken
-        tokenList[_idIn].token.safeTransfer(_msgSender(), amount.add(fee));
-    }
-    
-    // ---------------------
-    
-    function estimateSellAtMaximumProfit(uint256 originID, uint256 targetID, uint256 _tokenBalance, uint256 exchangeNum, bool classicArb, uint256 buyExchangeNum) internal view returns (uint256) {
+    function estimateSellAtMaximumProfit(uint256 originID, uint256 targetID, uint256 _tokenBalance) internal view returns (uint256) {
         // This will estimate the amount that can be sold for the maximum profit possible
         // We discover the price then compare it to the actual return
         // The return must be positive to return a positive amount
@@ -1194,7 +889,7 @@ contract StandardStrategyArbV2 is Ownable {
         uint256 _minAmount = _tokenBalance.mul(maxPercentSell.div(1000)).div(DIVISION_FACTOR);
         if(_minAmount == 0){ return 0; } // Nothing to sell, can't calculate
         uint256 _minReturn = _minAmount.mul(10**tokenList[targetID].decimals).div(10**tokenList[originID].decimals); // Convert decimals
-        uint256 _return = simulateExchange(originID, targetID, _minAmount, exchangeNum, classicArb, buyExchangeNum);
+        uint256 _return = simulateExchange(originID, targetID, _minAmount);
         if(_return <= _minReturn){
             return 0; // We are not going to gain from this trade
         }
@@ -1203,7 +898,7 @@ contract StandardStrategyArbV2 is Ownable {
         
         // Now get the price at a higher amount, expected to be lower due to slippage
         uint256 _bigAmount = _tokenBalance.mul(maxPercentSell).div(DIVISION_FACTOR);
-        _return = simulateExchange(originID, targetID, _bigAmount, exchangeNum, classicArb, buyExchangeNum);
+        _return = simulateExchange(originID, targetID, _bigAmount);
         _return = _return.mul(10**tokenList[originID].decimals).div(10**tokenList[targetID].decimals); // Convert to origin decimals
         uint256 _endPrice = _return.mul(1e18).div(_bigAmount);
         if(_endPrice >= _startPrice){
@@ -1221,21 +916,18 @@ contract StandardStrategyArbV2 is Ownable {
         return _targetAmount;
     }
     
-    function checkAndSwapToken(address _executor, uint256 _tokenID, uint256 targetID, uint256 sellExchangeNum, bool doFlash) internal {
-        require(_tokenID < tokenList.length && targetID < tokenList.length, "Token ID outside range");
-        require(sellExchangeNum < EXCHANGE_COUNT, "Exchange number is outside range");
-        if(_tokenID == targetID){return;}
-        // To save even more gas, we require the executor to know which exchange they are selling tokens into
+    function checkAndSwapToken(address _executor, uint256 targetID, bool doFlash) internal {
+        require(targetID < tokenList.length, "Token ID outside range");
+        // To save even more gas, we require the executor to know which tokens to buy
         lastTradeTime = now;
         
         // Now sell all the other tokens into this token
         uint256 _totalBalance = balance(); // Get the token balance at this contract, should increase
-
         bool _expectIncrease = false;
-        uint256 gain = 0;
         {
             if(doFlash == false){
-                if(targetID != _tokenID){
+                for(uint256 _tokenID = 0; _tokenID < tokenList.length; _tokenID++){
+                    if(targetID == _tokenID){continue;}
                     // Just sell normally
                     uint256 sellBalance = 0;
                     uint256 _minTradeTarget = minTradeSplit.mul(10**tokenList[_tokenID].decimals);
@@ -1243,7 +935,7 @@ contract StandardStrategyArbV2 is Ownable {
                     if(_bal <= _minTradeTarget){
                         sellBalance = _bal;
                     }else{
-                        sellBalance = estimateSellAtMaximumProfit(_tokenID, targetID, _bal, sellExchangeNum, false, 0);
+                        sellBalance = estimateSellAtMaximumProfit(_tokenID, targetID, _bal);
                     }
                     uint256 _maxTradeTarget = maxAmountSell.mul(10**tokenList[_tokenID].decimals);
                     if(sellBalance > _maxTradeTarget){
@@ -1251,38 +943,35 @@ contract StandardStrategyArbV2 is Ownable {
                     }
                     if(sellBalance > 0){
                         uint256 minReceiveBalance = sellBalance.mul(10**tokenList[targetID].decimals).div(10**tokenList[_tokenID].decimals); // Change to match decimals of destination
-                        uint256 estimate = simulateExchange(_tokenID, targetID, sellBalance, sellExchangeNum, false, 0);
+                        uint256 estimate = simulateExchange(_tokenID, targetID, sellBalance);
                         if(estimate > minReceiveBalance){
                             _expectIncrease = true;
                             // We are getting a greater number of tokens, complete the exchange
-                            exchange(_tokenID, targetID, sellBalance, sellExchangeNum, false, 0);
+                            exchange(_tokenID, targetID, sellBalance);
                         }
                     }
-                }
-                
-                uint256 _newBalance = balance();
-                if(_expectIncrease == true){
-                    // There may be rare scenarios where we don't gain any by calling this function
-                    require(_newBalance > _totalBalance, "Failed to gain in balance from selling tokens");
-                }
-                
-                gain = _newBalance.sub(_totalBalance);
+                }                
             }else{
-                // Get the exchange with the best return back first
-                uint256 buyExchangeNum = getExchangeBestReturn(targetID, _tokenID, maxAmountSell.mul(10**tokenList[targetID].decimals));
-                if(buyExchangeNum == sellExchangeNum){return;} // Do not do swaps on same exchanges
-                uint256 tradeSize = estimateSellAtMaximumProfit(_tokenID, targetID, maxAmountSell.mul(10**tokenList[_tokenID].decimals), sellExchangeNum, true, buyExchangeNum); // This will return our ideal trade size
-                if(tradeSize > 0){
-                    performFlashLoan(_tokenID, targetID, sellExchangeNum, buyExchangeNum, tradeSize); // Our underlying balance should increase, otherwise this will revert
-                }
+                // Run the flash module
+                // It will perform a flash loan and return the profit to this strategy as IRON if successful
+                _expectIncrease = true;
+                IronFlashModule(flashModuleAddress).doFlashTrade();
+                targetID = 0;
             }
         }
         
+        uint256 _newBalance = balance();
+        if(_expectIncrease == true){
+            // There may be rare scenarios where we don't gain any by calling this function
+            require(_newBalance > _totalBalance, "Failed to gain in balance from selling tokens");
+        }
+        
+        uint256 gain = _newBalance.sub(_totalBalance);
         if(gain > minAmountProfit){
             uint256 sellBalance = gain.mul(10**tokenList[targetID].decimals).div(1e18);
             sellBalance = sellBalance.mul(DIVISION_FACTOR.sub(percentDepositor)).div(DIVISION_FACTOR);
             if(sellBalance <= tokenList[targetID].token.balanceOf(address(this))){
-                exchange(targetID, WBNB_TOKEN_ID, sellBalance, 0, false, 0); // This is params for WBNB buy
+                exchange(targetID, WBNB_TOKEN_ID, sellBalance); // This is params for WBNB buy
             }
         }
         
@@ -1339,25 +1028,22 @@ contract StandardStrategyArbV2 is Ownable {
         }
     }
     
-    // Accepts 1) bool whether to show us executor profit, 2) uint256 token ID to sell, 3) check if flash loan available
-    // Returns 1) uint256 profit as wei units BNB or wei units total profit depending on inWBNBforExecutor
-    // Returns 2) uint256 targetID to buy
-    // Returns 3) uint256 exchangeID to buy token on
-    function expectedProfit(bool inWBNBForExecutor, uint256 _tokenID, bool checkFlash) external view returns (uint256,uint256,uint256) {
-        require(_tokenID < tokenList.length, "Token ID outside range");
+    // Accepts param bool to to whether to show profit in total profit wei or executor profit (in BNB) wei
+    // Also a bool to check the flash module for potential profit
+    // Returns 1) profit, 2) uint256 tokenID to buy
+    function expectedProfit(bool inWBNBForExecutor, bool checkFlash) external view returns (uint256,uint256) {
         // This view will return the expected profit in wei units that a trading activity will have on the pool
         // It will also return the exchange to sell the token into the target token
         
         // Now sell all the other tokens into this token
         uint256 _normalizedGain = 0;
-        uint256 sellExchangeNum;
         uint256 targetID;
-
         {
-            // Go through the token and find the best exchange to trade it
-            (sellExchangeNum, targetID) = getExchanges(_tokenID);
+            // Go through the token and find the cheapest token
             if(checkFlash == false){
-                if(targetID != _tokenID){
+                targetID = getCheapestToken();
+                for(uint256 _tokenID = 0; _tokenID < tokenList.length; _tokenID++){
+                    if(targetID == _tokenID){continue;}
                     // Just sell normally
                     uint256 sellBalance = 0;
                     uint256 _minTradeTarget = minTradeSplit.mul(10**tokenList[_tokenID].decimals);
@@ -1365,7 +1051,7 @@ contract StandardStrategyArbV2 is Ownable {
                     if(_bal <= _minTradeTarget){
                         sellBalance = _bal;
                     }else{
-                        sellBalance = estimateSellAtMaximumProfit(_tokenID, targetID, _bal, sellExchangeNum, false, 0);
+                        sellBalance = estimateSellAtMaximumProfit(_tokenID, targetID, _bal);
                     }
                     uint256 _maxTradeTarget = maxAmountSell.mul(10**tokenList[_tokenID].decimals);
                     if(sellBalance > _maxTradeTarget){
@@ -1373,79 +1059,61 @@ contract StandardStrategyArbV2 is Ownable {
                     }
                     if(sellBalance > 0){
                         uint256 minReceiveBalance = sellBalance.mul(10**tokenList[targetID].decimals).div(10**tokenList[_tokenID].decimals); // Change to match decimals of destination
-                        uint256 estimate = simulateExchange(_tokenID, targetID, sellBalance, sellExchangeNum, false, 0);
+                        uint256 estimate = simulateExchange(_tokenID, targetID, sellBalance);
                         if(estimate > minReceiveBalance){
                             uint256 _gain = estimate.sub(minReceiveBalance).mul(1e18).div(10**tokenList[targetID].decimals); // Normalized gain
                             _normalizedGain = _normalizedGain.add(_gain);
                         }         
                     }
-                }
-                
-                if(_normalizedGain <= minAmountProfit){
-                    // Set to 0 if gain is not enough
-                    _normalizedGain = 0;
-                }
+                }                
             }else{
-                // Get the exchange with the best return back first
-                uint256 buyExchangeNum = getExchangeBestReturn(targetID, _tokenID, maxAmountSell.mul(10**tokenList[targetID].decimals));
-                if(buyExchangeNum != sellExchangeNum){
-                    // Do not check swaps on same exchanges
-                    uint256 tradeSize = estimateSellAtMaximumProfit(_tokenID, targetID, maxAmountSell.mul(10**tokenList[_tokenID].decimals), sellExchangeNum, true, buyExchangeNum); // This will return our ideal trade size
-                    if(tradeSize > 0){
-                        if(inWBNBForExecutor == true){
-                            _normalizedGain = estimateFlashLoanResult(_tokenID, targetID, sellExchangeNum, buyExchangeNum, tradeSize, true); // Return profit expected
-                        }else{
-                            _normalizedGain = estimateFlashLoanResult(_tokenID, targetID, sellExchangeNum, buyExchangeNum, tradeSize, false); // Return profit expected
-                        }
-                    } 
-                }                    
+                _normalizedGain = IronFlashModule(flashModuleAddress).checkFlashTrade(); // Gain in IRON
+                targetID = 0;
             }
+        }
+        
+        if(_normalizedGain <= minAmountProfit){
+            // Set to 0 if gain is not enough
+            _normalizedGain = 0;
         }
 
         if(inWBNBForExecutor == false){
-            return (_normalizedGain,  targetID, sellExchangeNum);
+            return (_normalizedGain,  targetID);
         }else{
             if(_normalizedGain == 0){
-                return (0,  targetID, sellExchangeNum);
+                return (0,  targetID);
             }
             // Calculate how much BNB the executor would make as profit
             uint256 estimate = 0;
-            if(checkFlash == false){
-                if(_normalizedGain > 0){
-                    uint256 sellBalance = _normalizedGain.mul(10**tokenList[targetID].decimals).div(1e18); // Convert to target decimals
-                    sellBalance = sellBalance.mul(DIVISION_FACTOR.sub(percentDepositor)).div(DIVISION_FACTOR);
-                    // Estimate output
-                    estimate = simulateExchange(targetID, WBNB_TOKEN_ID, sellBalance, 0, false, 0);           
-                }                
-            }else{
-                estimate = _normalizedGain;
+            if(_normalizedGain > 0){
+                uint256 sellBalance = _normalizedGain.mul(10**tokenList[targetID].decimals).div(1e18); // Convert to target decimals
+                sellBalance = sellBalance.mul(DIVISION_FACTOR.sub(percentDepositor)).div(DIVISION_FACTOR);
+                // Estimate output
+                estimate = simulateExchange(targetID, WBNB_TOKEN_ID, sellBalance);           
             }
             // Now calculate the amount going to the executor
             uint256 gasFee = gasPrice.mul(gasStipend); // This is gas stipend in wei
             if(gasFee >= estimate.mul(maxPercentStipend).div(DIVISION_FACTOR)){ // Max percent of total
-                return (estimate.mul(maxPercentStipend).div(DIVISION_FACTOR),  targetID, sellExchangeNum); // The executor will get max percent of total
+                return (estimate.mul(maxPercentStipend).div(DIVISION_FACTOR),  targetID); // The executor will get max percent of total
             }else{
                 estimate = estimate.sub(gasFee); // Subtract fee from remaining balance
-                return (estimate.mul(percentExecutor).div(DIVISION_FACTOR).add(gasFee),  targetID, sellExchangeNum); // Executor amount with fee added
+                return (estimate.mul(percentExecutor).div(DIVISION_FACTOR).add(gasFee),  targetID); // Executor amount with fee added
             }
         }
     }
     
-    // Accepts 1) address that profit will go to, 2) uint256 minimum amount of seconds required between this swap and last
-    // 3) uint256 tokenID for token we want to sell, 4) uint256 tokenID of the token we want to buy, 5) uint256 exchange that we want to use to sell
-    // 6) bool whether to execute via flash loan
-    function executorSwapTokens(address _executor, uint256 _minSecSinceLastTrade, 
-                                uint256 _sellToken, uint256 _buyToken, uint256 _sellExchangeNum, bool doFlash) external {
+    // Accepts 1) address for where executor profit should go, 2) uint256 minimum seconds required since last trade, 3) uint256 tokenID to buy
+    function executorSwapTokens(address _executor, uint256 _minSecSinceLastTrade, uint256 _buyToken, bool doFlash) external {
         // Function designed to promote trading with incentive. Users get percentage of WBNB from profitable trades
         require(now.sub(lastTradeTime) >= _minSecSinceLastTrade, "The last trade was too recent");
         require(_msgSender() == tx.origin, "Contracts cannot interact with this function");
-        checkAndSwapToken(_executor, _sellToken,  _buyToken, _sellExchangeNum, doFlash);
+        checkAndSwapToken(_executor, _buyToken, doFlash);
     }
     
     // Governance functions
-    function governanceSwapTokens(uint256 _sellToken, uint256 _buyToken, uint256 _sellExchangeNum, bool doFlash) external onlyGovernance {
+    function governanceSwapTokens(uint256 _buyToken, bool doFlash) external onlyGovernance {
         // This is function that force trade tokens at anytime. It can only be called by governance
-        checkAndSwapToken(_msgSender(), _sellToken,  _buyToken, _sellExchangeNum, doFlash);
+        checkAndSwapToken(_msgSender(), _buyToken, doFlash);
     }
     
     // Change the trading conditions used by the strategy without timelock
@@ -1477,7 +1145,7 @@ contract StandardStrategyArbV2 is Ownable {
     
     // Reusable timelock variables
     address private _timelock_address;
-    uint256[4] private _timelock_data;
+    uint256[3] private _timelock_data;
     
     modifier timelockConditionsMet(uint256 _type) {
         require(_timelockType == _type, "Timelock not acquired for this function");
@@ -1530,22 +1198,33 @@ contract StandardStrategyArbV2 is Ownable {
     // Change the strategy allocations between the parties
     // --------------------
     
-    function startChangeStrategyAllocations(uint256 _pDepositors, uint256 _pFDepositors, uint256 _pStakers, uint256 _pExecutor) external onlyGovernance {
+    function startChangeStrategyAllocations(uint256 _pDepositors, uint256 _pStakers, uint256 _pExecutor) external onlyGovernance {
         // Changes strategy allocations in one call
-        require(_pDepositors <= 100000 && _pExecutor <= 100000 && _pStakers <= 100000 && _pFDepositors <= 100000,"Percent cannot be greater than 100%");
+        require(_pDepositors <= 100000 && _pExecutor <= 100000 && _pStakers <= 100000,"Percent cannot be greater than 100%");
         _timelockStart = now;
         _timelockType = 4;
         _timelock_data[0] = _pDepositors;
         _timelock_data[1] = _pExecutor;
         _timelock_data[2] = _pStakers;
-        _timelock_data[3] = _pFDepositors;
     }
     
     function finishChangeStrategyAllocations() external onlyGovernance timelockConditionsMet(4) {
         percentDepositor = _timelock_data[0];
         percentExecutor = _timelock_data[1];
         percentStakers = _timelock_data[2];
-        percentFlashDepositor = _timelock_data[3];
+    }
+    // --------------------
+    
+    // Change the flash module
+    // --------------------
+    function startChangeFlashModule(address _address) external onlyGovernance {
+        _timelockStart = now;
+        _timelockType = 5;
+        _timelock_address = _address;
+    }
+    
+    function finishChangeFlashModule() external onlyGovernance timelockConditionsMet(5) {
+        flashModuleAddress = _timelock_address;
     }
     // --------------------
     
