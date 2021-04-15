@@ -13,11 +13,11 @@ Merkle Airdrop: https://bscscan.com/address/0xea751572184ca6244b6ECcC1830c1830A1
 ### Strategy Contracts
 zsb-USD: https://bscscan.com/address/0x62b39BEB9e784e957CD112706919a9F6bACE0Cc5
 
-zsb-USD StrategyV1: https://bscscan.com/address/0xf5935955DcD96d3A0399b875cf94b234C96022EE
+zsb-USD StrategyV2: https://bscscan.com/address/0xF38970b58db5736F8A7b20790AE67629342fC08f
 
 zsb-IRON: https://bscscan.com/address/0xfF756ceb8aca17C302E33cfa9b368F8002926453
 
-zsb-IRON StrategyV1: https://bscscan.com/address/0x039C68e194e714cfb454E9508bd02589d59C99F3
+zsb-IRON StrategyV2: https://bscscan.com/address/0x4aC49497d6AE323379f4Fc18C5338c1790D42E24
 
 zsb-BDO: https://bscscan.com/address/0xFAAC2Fe54935029B9b872d5a4020493A21dC020f
 
@@ -31,6 +31,11 @@ zsb-MDO: https://bscscan.com/address/0x76F4bFB6C8ea2397bB5D7c2AaF49846F9E34c6A1
 
 zsb-MDO StrategyV1: https://bscscan.com/address/0xfB98F6fEa9bF55227f50Ea8AA0d80A168cC44b92
 
+### Retired Contracts
+
+zsb-IRON StrategyV1: https://bscscan.com/address/0x039C68e194e714cfb454E9508bd02589d59C99F3
+
+zsb-USD StrategyV1: https://bscscan.com/address/0xf5935955DcD96d3A0399b875cf94b234C96022EE
 
 ## Read our Medium:
 Medium: https://medium.com/@stabilize
