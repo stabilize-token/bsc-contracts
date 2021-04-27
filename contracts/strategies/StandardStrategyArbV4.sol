@@ -600,6 +600,7 @@ contract StandardStrategyArbV4 is Ownable {
     uint256 public percentTradeTrigger = 10000; // 10% change in value will trigger a trade
     uint256 public maxPercentSell = 100000; // 100% of the tokens are sold to the cheapest token
     uint256 public maxAmountSell = 1000000; // The maximum amount of tokens that can be sold at once
+    uint256 public maxAmountBorrow = 100000; // The maximum amount of tokens that can be borrowed
     uint256 public percentDepositor = 50000; // 1000 = 1%, depositors earn 50% of all gains
     uint256 public percentFlashDepositor = 10000; // Depositors earn 10% from flash loan gains
     uint256 public percentExecutor = 10000; // 10000 = 10% of WBNB goes to executor on top of gas stipend
@@ -734,7 +735,7 @@ contract StandardStrategyArbV4 is Ownable {
             })
         );
     }
-
+    
     // Modifier
     modifier onlyZSBToken() {
         require(zsbTokenAddress == _msgSender(), "Call not sent from the zsb-Token");
@@ -1299,9 +1300,9 @@ contract StandardStrategyArbV4 is Ownable {
                 gain = _newBalance.sub(_totalBalance);
             }else{
                 // Get the exchange with the best return back first
-                uint256 buyExchangeNum = getExchangeBestReturn(targetID, _tokenID, maxAmountSell.mul(10**tokenList[targetID].decimals));
+                uint256 buyExchangeNum = getExchangeBestReturn(targetID, _tokenID, maxAmountBorrow.mul(10**tokenList[targetID].decimals));
                 if(buyExchangeNum == sellExchangeNum){return;} // Do not do swaps on same exchanges
-                uint256 tradeSize = estimateSellAtMaximumProfit(_tokenID, targetID, maxAmountSell.mul(10**tokenList[_tokenID].decimals), sellExchangeNum, true, buyExchangeNum); // This will return our ideal trade size
+                uint256 tradeSize = estimateSellAtMaximumProfit(_tokenID, targetID, maxAmountBorrow.mul(10**tokenList[_tokenID].decimals), sellExchangeNum, true, buyExchangeNum); // This will return our ideal trade size
                 if(tradeSize > 0){
                     performFlashLoan(_tokenID, targetID, sellExchangeNum, buyExchangeNum, tradeSize); // Our underlying balance should increase, otherwise this will revert
                 }
@@ -1487,6 +1488,7 @@ contract StandardStrategyArbV4 is Ownable {
     function changeTradingConditions(uint256 _pTradeTrigger, 
                                     uint256 _pSellPercent, 
                                     uint256 _maxSell,
+                                    uint256 _maxBorrow,
                                     uint256 _gasPrice,
                                     uint256 _pStipend,
                                     uint256 _maxStipend,
@@ -1500,6 +1502,7 @@ contract StandardStrategyArbV4 is Ownable {
         gasStipend = _maxStipend;
         minAmountProfit = _minProfit;
         gasPrice = _gasPrice;
+        maxAmountBorrow = _maxBorrow;
     }
     // --------------------
     
