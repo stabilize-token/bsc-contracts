@@ -15,7 +15,7 @@ Merkle Airdrop: https://bscscan.com/address/0xea751572184ca6244b6ECcC1830c1830A1
 ### Strategy Contracts
 zsb-USD: https://bscscan.com/address/0x62b39BEB9e784e957CD112706919a9F6bACE0Cc5
 
-zsb-USD StrategyV3: https://bscscan.com/address/0x83fC874F414E71087Ec6DA88eFc8E0319A99be4F
+zsb-USD StrategyV4: https://bscscan.com/address/0x33Afc06333cE47f26825BEfae65dd38eB0ee519A
 
 zsb-IRON: https://bscscan.com/address/0xfF756ceb8aca17C302E33cfa9b368F8002926453
 
@@ -30,6 +30,8 @@ zsb-BTC: https://bscscan.com/address/0x755966B34135Cd34Dbc880fCF82C751f26872390
 zsb-BTC StrategyV1: https://bscscan.com/address/0x22066507Cb67d8523Ce3Ca8115D48B759ca40421
 
 ### Retired Contracts
+
+zsb-USD StrategyV3: https://bscscan.com/address/0x83fC874F414E71087Ec6DA88eFc8E0319A99be4F
 
 zsb-MDO: https://bscscan.com/address/0x76F4bFB6C8ea2397bB5D7c2AaF49846F9E34c6A1
 
