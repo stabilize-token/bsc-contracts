@@ -29,6 +29,10 @@ zsb-BTC: https://bscscan.com/address/0x755966B34135Cd34Dbc880fCF82C751f26872390
 
 zsb-BTC StrategyV1: https://bscscan.com/address/0x22066507Cb67d8523Ce3Ca8115D48B759ca40421
 
+zsb-USDG: https://bscscan.com/address/0x507Cd42d23853463F1Ec7bec88100e22c125C181
+
+zsb-USDG StrategyV1: https://bscscan.com/address/0xa9640Ddc5FECF80E6e0504F5F47C3003CC0A777a
+
 ### Retired Contracts
 
 zsb-USD StrategyV3: https://bscscan.com/address/0x83fC874F414E71087Ec6DA88eFc8E0319A99be4F
