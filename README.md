@@ -31,13 +31,15 @@ zsb-BTC StrategyV2: https://bscscan.com/address/0xb603CA56b5723Dd73177c888a43aE2
 
 zsb-USDG: https://bscscan.com/address/0x507Cd42d23853463F1Ec7bec88100e22c125C181
 
-zsb-USDG StrategyV1: https://bscscan.com/address/0xa9640Ddc5FECF80E6e0504F5F47C3003CC0A777a
+zsb-USDG StrategyV2: https://bscscan.com/address/0x44b575233f111b04a2e4d1cB19318099A803F25b
 
 zsb-MBDO: https://bscscan.com/address/0x31e0c311EE4cECe47729e295ED6108372C5f4e42
 
 zsb-MBDO StrategyV1: https://bscscan.com/address/0xe222E1a62b3e11F4d107e4746a88Bd69eB192f75
 
 ### Retired Contracts
+
+zsb-USDG StrategyV1: https://bscscan.com/address/0xa9640Ddc5FECF80E6e0504F5F47C3003CC0A777a
 
 zsb-ETH StrategyV1: https://bscscan.com/address/0x8193bD90Cda7306770AB6C92871f95bB4eefA9f7
 
