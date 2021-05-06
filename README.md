@@ -8,6 +8,8 @@ Developer Treasury: https://bscscan.com/address/0xBadf379be89b77D059aB02d871FC23
 
 Contributors Vault: https://bscscan.com/address/0x7903fb0922a01Ffa4efEEc9A752eeC2eb0695191
 
+Community Fund: https://bscscan.com/address/0x4589Af2Ce85a6e7c20cc47F6A3400c7c9e886Cc2
+
 Emissions Operator: https://bscscan.com/address/0x9F37068a58DE8a2adfaECA4Eb01794E23868365F
 
 Merkle Airdrop: https://bscscan.com/address/0xea751572184ca6244b6ECcC1830c1830A12dA6C6
