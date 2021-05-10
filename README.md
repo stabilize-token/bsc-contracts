@@ -43,6 +43,10 @@ zsb-UST: https://bscscan.com/address/0xbd4666F561632bA33680cD24adf2c4C12FF303B4
 
 zsb-UST StrategyV2: https://bscscan.com/address/0x27AC425c09298EEbbe03E4AbdEF8852edFFDB887
 
+zsb-DOLLY: https://bscscan.com/address/0xaE0a2e71c9Bf3596511aE76164368954D900623c
+
+zsb-DOLLY StrategyV1: https://bscscan.com/address/0xC696a0a9B3324B7438ff453aF9bC2233BcE40b61
+
 ### Retired Contracts
 
 zsb-UST StrategyV1: https://bscscan.com/address/0xF5c64D672144645cA2E293012c6a8c687B1b956D
