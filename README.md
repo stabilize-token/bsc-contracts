@@ -21,7 +21,7 @@ zsb-USD StrategyV5: https://bscscan.com/address/0xDb37fF5d10415fE8d857eEE70069E8
 
 zsb-IRON2: https://bscscan.com/address/0xbdF5A2d30C69bD2557e9dAE4a30e5A426141293E
 
-zsb-IRON StrategyV4: https://bscscan.com/address/0x5c9CEf9a7E88d87Da55905C50329960f6C809304
+zsb-IRON2 StrategyV4: https://bscscan.com/address/0x5c9CEf9a7E88d87Da55905C50329960f6C809304
 
 zsb-ETH: https://bscscan.com/address/0xD256E756BCd536b0C6c6630C5b31Da5ecF21568A
 
