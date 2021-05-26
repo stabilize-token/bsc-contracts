@@ -35,10 +35,6 @@ zsb-USDG: https://bscscan.com/address/0x507Cd42d23853463F1Ec7bec88100e22c125C181
 
 zsb-USDG StrategyV2: https://bscscan.com/address/0x44b575233f111b04a2e4d1cB19318099A803F25b
 
-zsb-MBDO: https://bscscan.com/address/0x31e0c311EE4cECe47729e295ED6108372C5f4e42
-
-zsb-MBDO StrategyV1: https://bscscan.com/address/0xe222E1a62b3e11F4d107e4746a88Bd69eB192f75
-
 zsb-UST: https://bscscan.com/address/0xbd4666F561632bA33680cD24adf2c4C12FF303B4
 
 zsb-UST StrategyV2: https://bscscan.com/address/0x5ee822E0aEC528314a2966C7Acf663992B59fFD0
@@ -48,6 +44,10 @@ zsb-DOLLY: https://bscscan.com/address/0xaE0a2e71c9Bf3596511aE76164368954D900623
 zsb-DOLLY StrategyV2: https://bscscan.com/address/0x477eebB70f0CbEB034a672dA48C710A4a0083285
 
 ### Retired Contracts
+
+zsb-MBDO: https://bscscan.com/address/0x31e0c311EE4cECe47729e295ED6108372C5f4e42
+
+zsb-MBDO StrategyV1: https://bscscan.com/address/0xe222E1a62b3e11F4d107e4746a88Bd69eB192f75
 
 zsb-DOLLY StrategyV1: https://bscscan.com/address/0xC696a0a9B3324B7438ff453aF9bC2233BcE40b61
 
