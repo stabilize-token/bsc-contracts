@@ -19,17 +19,9 @@ zsb-USD: https://bscscan.com/address/0x62b39BEB9e784e957CD112706919a9F6bACE0Cc5
 
 zsb-USD StrategyV5: https://bscscan.com/address/0xDb37fF5d10415fE8d857eEE70069E8d4aD587bEC
 
-zsb-IRON2: https://bscscan.com/address/0xbdF5A2d30C69bD2557e9dAE4a30e5A426141293E
-
-zsb-IRON2 StrategyV4: https://bscscan.com/address/0x5c9CEf9a7E88d87Da55905C50329960f6C809304
-
 zsb-ETH: https://bscscan.com/address/0xD256E756BCd536b0C6c6630C5b31Da5ecF21568A
 
 zsb-ETH StrategyV2: https://bscscan.com/address/0x75613C28F69c61A5E8fe28ba068A06366E791bC0
-
-zsb-BTC: https://bscscan.com/address/0x755966B34135Cd34Dbc880fCF82C751f26872390
-
-zsb-BTC StrategyV3: https://bscscan.com/address/0x8552FF24636162e1726EEf7612d0e147B4aAB996
 
 zsb-USDG: https://bscscan.com/address/0x507Cd42d23853463F1Ec7bec88100e22c125C181
 
@@ -44,6 +36,14 @@ zsb-DOLLY: https://bscscan.com/address/0xaE0a2e71c9Bf3596511aE76164368954D900623
 zsb-DOLLY StrategyV2: https://bscscan.com/address/0x477eebB70f0CbEB034a672dA48C710A4a0083285
 
 ### Retired Contracts
+
+zsb-IRON2: https://bscscan.com/address/0xbdF5A2d30C69bD2557e9dAE4a30e5A426141293E
+
+zsb-IRON2 StrategyV4: https://bscscan.com/address/0x5c9CEf9a7E88d87Da55905C50329960f6C809304
+
+zsb-BTC: https://bscscan.com/address/0x755966B34135Cd34Dbc880fCF82C751f26872390
+
+zsb-BTC StrategyV3: https://bscscan.com/address/0x8552FF24636162e1726EEf7612d0e147B4aAB996
 
 zsb-MBDO: https://bscscan.com/address/0x31e0c311EE4cECe47729e295ED6108372C5f4e42
 
