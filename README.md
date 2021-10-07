@@ -4,7 +4,7 @@ Protocol that promotes stablecoins to stay on their peg with reward incentives. 
 ## Find the contracts at:
 STBB Token: https://bscscan.com/address/0xE1316066af35fbfF54f870eA6d1468255602a696
 
-Developer Treasury: https://bscscan.com/address/0xBadf379be89b77D059aB02d871FC2372BeF65Fa6
+Developers Treasury: https://bscscan.com/address/0xBadf379be89b77D059aB02d871FC2372BeF65Fa6
 
 Contributors Vault: https://bscscan.com/address/0x7903fb0922a01Ffa4efEEc9A752eeC2eb0695191
 
