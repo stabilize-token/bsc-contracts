@@ -27,6 +27,10 @@ zsb-USDG: https://bscscan.com/address/0x507Cd42d23853463F1Ec7bec88100e22c125C181
 
 zsb-USDG StrategyV4: https://bscscan.com/address/0x82C4841728fBd5e08A77A95cA3192BcE1F645Ee9
 
+zsb-STATIC: https://bscscan.com/address/0x37fF51b19B51a8dd659Ac0F1093ebEa32F4c2933
+
+zsb-STATIC StrategyV1: https://bscscan.com/address/0x1212B0CC5Fdd85526D780DFf107dc19a557cC09C
+
 ### Retired Contracts
 zsb-UST: https://bscscan.com/address/0xbd4666F561632bA33680cD24adf2c4C12FF303B4
 
