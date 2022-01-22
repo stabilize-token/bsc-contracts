@@ -23,6 +23,10 @@ zsb-STATIC: https://bscscan.com/address/0x37fF51b19B51a8dd659Ac0F1093ebEa32F4c29
 
 zsb-STATIC StrategyV1: https://bscscan.com/address/0x1212B0CC5Fdd85526D780DFf107dc19a557cC09C
 
+zsb-oneDODO: https://bscscan.com/address/0x1E73360Cc3b761CC03a2e20744F6A99F25cb55c5
+
+zsb-oneDODO StrategyV1: https://bscscan.com/address/0x08d402c0211e1dC34d7cb3a00078E459A2b0EceE
+
 ### Retired Contracts
 zsb-ETH: https://bscscan.com/address/0xD256E756BCd536b0C6c6630C5b31Da5ecF21568A
 
