@@ -19,15 +19,15 @@ zsb-USD: https://bscscan.com/address/0x62b39BEB9e784e957CD112706919a9F6bACE0Cc5
 
 zsb-USD StrategyV8: https://bscscan.com/address/0x2A63ac3B57fE8A47F338F1C89B8A8ca33256dF5a
 
-zsb-STATIC: https://bscscan.com/address/0x37fF51b19B51a8dd659Ac0F1093ebEa32F4c2933
-
-zsb-STATIC StrategyV2: https://bscscan.com/address/0x470DeB6ea4A9a74C29F547c6489ba643F32541cA
-
 zsb-oneDODO: https://bscscan.com/address/0x1E73360Cc3b761CC03a2e20744F6A99F25cb55c5
 
 zsb-oneDODO StrategyV1: https://bscscan.com/address/0x08d402c0211e1dC34d7cb3a00078E459A2b0EceE
 
 ### Retired Contracts
+zsb-STATIC: https://bscscan.com/address/0x37fF51b19B51a8dd659Ac0F1093ebEa32F4c2933
+
+zsb-STATIC StrategyV2: https://bscscan.com/address/0x470DeB6ea4A9a74C29F547c6489ba643F32541cA
+
 zsb-STATIC StrategyV1: https://bscscan.com/address/0x1212B0CC5Fdd85526D780DFf107dc19a557cC09C
 
 zsb-ETH: https://bscscan.com/address/0xD256E756BCd536b0C6c6630C5b31Da5ecF21568A
