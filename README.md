@@ -25,9 +25,11 @@ zsb-AUSDLP StrategyV1: https://bscscan.com/address/0x9134920B863d396579238d0810A
 
 zsb-USDDLP: https://bscscan.com/address/0xdf7c0c2Ed48B1D3B5a60d1cF63a22Fb3dF402D94
 
-zsb-USDDLP StrategyV1: https://bscscan.com/address/0xabd3Bdc22aea0e20d7f46c4b9157272848c3Be63
+zsb-USDDLP StrategyV2: https://bscscan.com/address/0xFb92fD83855DF46A89d4F889f229d45007D0396D
 
 ### Retired Contracts
+zsb-USDDLP StrategyV1: https://bscscan.com/address/0xabd3Bdc22aea0e20d7f46c4b9157272848c3Be63
+
 zsb-oneDODO: https://bscscan.com/address/0x1E73360Cc3b761CC03a2e20744F6A99F25cb55c5
 
 zsb-oneDODO StrategyV1: https://bscscan.com/address/0x08d402c0211e1dC34d7cb3a00078E459A2b0EceE
