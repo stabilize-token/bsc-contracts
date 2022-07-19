@@ -1035,7 +1035,7 @@ contract USDDLPStrategyStakeOnlyV4 is Ownable {
         require(block.number <= _deadlineBlock, "Deadline has expired, aborting trade");
         // Function designed to promote trading with incentive. Users get percentage of WBNB from profitable trades
         require(now.sub(lastTradeTime) >= _minSecSinceLastTrade, "The last trade was too recent");
-        require(_msgSender() == tx.origin, "Contracts cannot interact with this function");
+        require(_msgSender() == msg.sender, "Contracts cannot interact with this function");
         checkAndSwapToken(_executor);
     }
     
