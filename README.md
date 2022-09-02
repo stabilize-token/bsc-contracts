@@ -17,7 +17,7 @@ Merkle Airdrop: https://bscscan.com/address/0xea751572184ca6244b6ECcC1830c1830A1
 ### Strategy Contracts
 zsb-USD: https://bscscan.com/address/0x62b39BEB9e784e957CD112706919a9F6bACE0Cc5
 
-zsb-USD StrategyV9: https://bscscan.com/address/0x95Aec9e531870BAD80f385A66485dbe78Bbea60e
+zsb-USD StrategyV10: https://bscscan.com/address/0x48D2fa3EF222349F175b221c27b2f23cbD375e79
 
 zsb-AUSDLP: https://bscscan.com/address/0xf988eB0889bA049145c09392D1C3a89Db8dEB930
 
@@ -25,10 +25,14 @@ zsb-AUSDLP StrategyV1: https://bscscan.com/address/0x9134920B863d396579238d0810A
 
 zsb-USDDLPv2: https://bscscan.com/address/0xCeef19C73D94EeA3EEc4207120aECb0BE3B08554
 
-zsb-USDDLP StrategyV4: https://bscscan.com/address/0x4e486926a6f88BFF26D41Ac85A8ccd128467847d
+zsb-USDDLP StrategyV5: https://bscscan.com/address/0x417c3acA495Da3A2e10fdF1B5BE89aCECF0DBC46
 
 
 ### Retired Contracts
+zsb-USDDLP StrategyV4: https://bscscan.com/address/0x4e486926a6f88BFF26D41Ac85A8ccd128467847d
+
+zsb-USD StrategyV9: https://bscscan.com/address/0x95Aec9e531870BAD80f385A66485dbe78Bbea60e
+
 zsb-USDDLP StrategyV3: https://bscscan.com/address/0x1652527A6824Fce67B12Fccb542a18A68bFb3AB5
 
 zsb-USDDLP: https://bscscan.com/address/0xdf7c0c2Ed48B1D3B5a60d1cF63a22Fb3dF402D94
