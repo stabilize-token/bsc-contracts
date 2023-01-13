@@ -23,6 +23,9 @@ zsb-AUSDLP: https://bscscan.com/address/0xf988eB0889bA049145c09392D1C3a89Db8dEB9
 
 zsb-AUSDLP StrategyV1: https://bscscan.com/address/0x9134920B863d396579238d0810A549FBC6f52a6d
 
+zsb-BUSD: https://bscscan.com/address/0x41F906c13a37DD18Efc00D5F2590929e3E73EEc7
+
+zsb-BUSD StrategyV1: https://bscscan.com/address/0x3A5641c6B99F7A084157f67D38a63Fd7d4e3eAd7
 
 ### Retired Contracts
 zsb-USDDLPv2: https://bscscan.com/address/0xCeef19C73D94EeA3EEc4207120aECb0BE3B08554
