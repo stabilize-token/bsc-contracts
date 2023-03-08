@@ -23,6 +23,10 @@ zsb-BUSD: https://bscscan.com/address/0x41F906c13a37DD18Efc00D5F2590929e3E73EEc7
 
 zsb-BUSD StrategyV3: https://bscscan.com/address/0x0297f4EA5848b41a5aEf972C28FCE7c4C5D0Ef06
 
+zsbh-USDC: https://bscscan.com/address/0xb03e22bf7aFe4E6d1b21f9973e406D983419EcCF
+
+zsbh-USDC StrategyV1: https://bscscan.com/address/0x95263D4A96De70cB9Ec20E96B9e42c88d55E8139
+
 ### Retired Contracts
 zsb-BUSD StrategyV2: https://bscscan.com/address/0x3E2a4bAeeD3a7120F1B72a6026f44c34c4aB1c55
 
