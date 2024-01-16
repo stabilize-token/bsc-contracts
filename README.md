@@ -17,9 +17,11 @@ Merkle Airdrop: https://bscscan.com/address/0xea751572184ca6244b6ECcC1830c1830A1
 ### Strategy Contracts
 zsb-USD: https://bscscan.com/address/0x62b39BEB9e784e957CD112706919a9F6bACE0Cc5
 
-zsb-USD Strategy WombexFarm: https://bscscan.com/address/0x3C06Fd627007186226149B1E873D46329e25135B
+zsb-USD Strategy WombexFarmV2: https://bscscan.com/address/0x8b6A9e38d6B5565316811d675f7e57E263257281
 
 ### Retired Contracts
+zsb-USD Strategy WombexFarmV1: https://bscscan.com/address/0x3C06Fd627007186226149B1E873D46329e25135B
+
 zsb-USD StrategyV12: https://bscscan.com/address/0x1cc97C6B2d6E2E860Ac2635C5152e8d65344c0d3
 
 zsb-BUSD: https://bscscan.com/address/0x41F906c13a37DD18Efc00D5F2590929e3E73EEc7
